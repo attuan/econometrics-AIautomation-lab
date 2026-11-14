@@ -1,0 +1,15 @@
+# 公開するライブラリの雛形。名前（labtool）は仮。公開の前に、名前・ライセンス・著者を人が決める。
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labtool"
+version = "0.0.1"
+description = "（1文で。誰の、どんな分析の、何を楽にするか）"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]

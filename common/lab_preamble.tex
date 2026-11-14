@@ -1,0 +1,38 @@
+% 共通プリアンブル。<project>/paper/main.tex から \input{../../common/lab_preamble}
+% 箱は決まったものだけ使う（AGENTS.md §3）。増やすときは AGENTS.md の一覧も直す。
+\usepackage{amsmath,amssymb,booktabs,tabularx,longtable,enumitem,xurl,graphicx}
+\usepackage[margin=25mm]{geometry}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing,positioning,calc}
+\usepackage[backend=biber,style=authoryear,natbib=true,maxcitenames=2,doi=true,url=true]{biblatex}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{labBlue}{HTML}{1F5FA8}
+\definecolor{labGreen}{HTML}{2E7D4F}
+\definecolor{labPurple}{HTML}{6A4C9C}
+\definecolor{labOrange}{HTML}{C8641E}
+\definecolor{labRed}{HTML}{B03A3A}
+\definecolor{labGray}{HTML}{5A6270}
+
+\tcbset{labbase/.style={breakable,enhanced,boxrule=0.6pt,arc=2pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\bfseries\small,before skip=8pt,after skip=8pt}}
+
+% 読むための箱
+\newtcolorbox{chaptermap}{labbase,colback=labBlue!4,colframe=labBlue,title={この文書の地図}}
+\newtcolorbox{keypoint}{labbase,colback=labBlue!4,colframe=labBlue,title={要点}}
+\newtcolorbox{term}[1]{labbase,colback=labGray!5,colframe=labGray,title={用語：#1}}
+\newtcolorbox{pitfall}{labbase,colback=labRed!4,colframe=labRed,title={落とし穴}}
+\newtcolorbox{debate}{labbase,colback=labGray!5,colframe=labGray,title={論争・別の説明}}
+
+% 研究の箱
+% 研究仮説：\begin{hypothesis}{H1 短い名前}
+\newtcolorbox{hypothesis}[1]{labbase,colback=labGreen!5,colframe=labGreen,title={仮説：#1}}
+% 識別戦略：\begin{design}{H1 差の差}
+\newtcolorbox{design}[1]{labbase,colback=labBlue!4,colframe=labBlue,title={識別戦略：#1}}
+% 推定結果：\begin{result}{H1 の検証（2026-11、確証）}
+\newtcolorbox{result}[1]{labbase,colback=labPurple!4,colframe=labPurple,title={結果：#1}}
+% 意思決定：続ける／やめる／変える
+\newtcolorbox{decision}{labbase,colback=labOrange!6,colframe=labOrange,title={判断（Go/No-Go）}}

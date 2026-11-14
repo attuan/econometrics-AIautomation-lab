@@ -1,0 +1,2 @@
+"spec_id","timestamp","hypothesis","stage","data","outcome","estimand","formula","sample","n","n_clusters","cluster","estimate","se","ci_low","ci_high","note"
+"S0001","2026-11-14T17:19:19","H1","synthetic","data/sim/panel.csv","y","ATT（処置後の全期間の平均）","単位ごとの (処置後平均 - 処置前平均) を処置群と対照群で比較","全標本",2000,200,"unit",0.413705,0.12015,0.178215,0.649195,"主仕様"

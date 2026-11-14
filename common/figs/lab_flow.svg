@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 644" font-family="'Hiragino Sans','Noto Sans JP',sans-serif">
+<rect width="760" height="644" fill="#ffffff"/>
+<text x="60" y="30" font-size="16" font-weight="700" fill="#1c2430">研究の流れ（上から順に進む）</text>
+<rect x="60" y="56" width="560" height="52" rx="6" fill="#ffffff" stroke="#c8641e" stroke-width="2"/>
+<text x="76" y="78" font-size="14" font-weight="700" fill="#1c2430">1. テーマを100個出し、10個に絞る</text>
+<text x="76" y="97" font-size="11.5" fill="#5a6270">15軸で採点・ブラインド再採点・星取り表</text>
+<text x="606" y="87" font-size="12" font-weight="700" fill="#c8641e" text-anchor="end">◆ 人が判断</text>
+<rect x="60" y="124" width="560" height="52" rx="6" fill="#ffffff" stroke="#c8641e" stroke-width="2"/>
+<text x="76" y="146" font-size="14" font-weight="700" fill="#1c2430">2. 10テーマをディープダイブする</text>
+<text x="76" y="165" font-size="11.5" fill="#5a6270">文献の地図・データの入手手順・識別の手がかり</text>
+<text x="606" y="155" font-size="12" font-weight="700" fill="#c8641e" text-anchor="end">◆ 人が判断</text>
+<path d="M340.0 108 V121 m-4 -5 l4 5 l4 -5" fill="none" stroke="#9aa3af" stroke-width="1.4"/>
+<rect x="60" y="192" width="560" height="52" rx="6" fill="#ffffff" stroke="#c8641e" stroke-width="2"/>
+<text x="76" y="214" font-size="14" font-weight="700" fill="#1c2430">3. 仮説を100個作り、10個選ぶ</text>
+<text x="76" y="233" font-size="11.5" fill="#5a6270">検証方法・必要なデータ・数値の棄却条件</text>
+<text x="606" y="223" font-size="12" font-weight="700" fill="#c8641e" text-anchor="end">◆ 人が判断</text>
+<path d="M340.0 176 V189 m-4 -5 l4 5 l4 -5" fill="none" stroke="#9aa3af" stroke-width="1.4"/>
+<rect x="60" y="260" width="560" height="52" rx="6" fill="#ffffff" stroke="#c8641e" stroke-width="2"/>
+<text x="76" y="282" font-size="14" font-weight="700" fill="#1c2430">4. 結果を見る前に、論文として書く</text>
+<text x="76" y="301" font-size="11.5" fill="#5a6270">表の枠・予想値・Go/No-Go → 承認してロック</text>
+<text x="606" y="291" font-size="12" font-weight="700" fill="#c8641e" text-anchor="end">◆ 人が判断</text>
+<path d="M340.0 244 V257 m-4 -5 l4 5 l4 -5" fill="none" stroke="#9aa3af" stroke-width="1.4"/>
+<rect x="60" y="328" width="560" height="52" rx="6" fill="#ffffff" stroke="#9aa3af" stroke-width="1.2"/>
+<text x="76" y="350" font-size="14" font-weight="700" fill="#1c2430">5. 文献をデータにする</text>
+<text x="76" y="369" font-size="11.5" fill="#5a6270">推定値・標準誤差・識別戦略を表に</text>
+<path d="M340.0 312 V325 m-4 -5 l4 5 l4 -5" fill="none" stroke="#9aa3af" stroke-width="1.4"/>
+<rect x="60" y="396" width="560" height="52" rx="6" fill="#ffffff" stroke="#9aa3af" stroke-width="1.2"/>
+<text x="76" y="418" font-size="14" font-weight="700" fill="#1c2430">6. シミュレーターを作り込む</text>
+<text x="76" y="437" font-size="11.5" fill="#5a6270">合成データで推定の手続きと検出力を点検</text>
+<path d="M340.0 380 V393 m-4 -5 l4 5 l4 -5" fill="none" stroke="#9aa3af" stroke-width="1.4"/>
+<rect x="60" y="464" width="560" height="52" rx="6" fill="#ffffff" stroke="#9aa3af" stroke-width="1.2"/>
+<text x="76" y="486" font-size="14" font-weight="700" fill="#1c2430">7. 推定し、すべての仕様を記録する</text>
+<text x="76" y="505" font-size="11.5" fill="#5a6270">確証と探索を分ける・仕様曲線</text>
+<path d="M340.0 448 V461 m-4 -5 l4 5 l4 -5" fill="none" stroke="#9aa3af" stroke-width="1.4"/>
+<rect x="60" y="532" width="560" height="52" rx="6" fill="#ffffff" stroke="#c8641e" stroke-width="2"/>
+<text x="76" y="554" font-size="14" font-weight="700" fill="#1c2430">8. 実証し、公開する</text>
+<text x="76" y="573" font-size="11.5" fill="#5a6270">査読者役の監査・再現パッケージ・論文・ライブラリ</text>
+<text x="606" y="563" font-size="12" font-weight="700" fill="#c8641e" text-anchor="end">◆ 人が判断</text>
+<path d="M340.0 516 V529 m-4 -5 l4 5 l4 -5" fill="none" stroke="#9aa3af" stroke-width="1.4"/>
+<path d="M620 490.0 H654 V354.0 H624 m5 -4 l-5 4 l5 4" fill="none" stroke="#6a4c9c" stroke-width="1.6"/>
+<text x="664" y="418.0" font-size="12" font-weight="700" fill="#6a4c9c">毎日回す</text>
+<text x="664" y="435.0" font-size="11" fill="#5a6270">5 → 6 → 7</text>
+<path d="M30 320.0 H650" stroke="#c8641e" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="656" y="324.0" font-size="11" fill="#c8641e">ロック</text>
+<text x="60" y="628" font-size="11" fill="#5a6270">破線より上では実データの結果変数を見ない。5・6 は結果変数を使わないので、ロック前から回してよい。</text>
+</svg>
