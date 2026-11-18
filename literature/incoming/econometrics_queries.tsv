@@ -1,0 +1,208 @@
+id	track	first_author	year	title
+callaway2021	method	Callaway	2021	Difference-in-Differences with multiple time periods
+goodmanbacon2021	method	Goodman-Bacon	2021	Difference-in-differences with variation in treatment timing
+sun2021	method	Sun	2021	Estimating dynamic treatment effects in event studies with heterogeneous treatment effects
+dechaisemartin2020	method	de Chaisemartin	2020	Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects
+borusyak2024	method	Borusyak	2024	Revisiting Event-Study Designs: Robust and Efficient Estimation
+roth2023	method	Roth	2023	What's trending in difference-in-differences? A synthesis of the recent econometrics literature
+rambachan2023	method	Rambachan	2023	A More Credible Approach to Parallel Trends
+baker2022	causal	Baker	2022	How much should we trust staggered difference-in-differences estimates?
+arkhangelsky2021	method	Arkhangelsky	2021	Synthetic Difference-in-Differences
+abadie2021	method	Abadie	2021	Using Synthetic Controls: Feasibility, Data Requirements, and Methodological Aspects
+abadie2010	method	Abadie	2010	Synthetic Control Methods for Comparative Case Studies: Estimating the Effect of California's Tobacco Control Program
+benmichael2021	method	Ben-Michael	2021	The Augmented Synthetic Control Method
+callaway2024	method	Callaway	2024	Difference-in-Differences with a Continuous Treatment
+cengiz2019	causal	Cengiz	2019	The Effect of Minimum Wages on Low-Wage Jobs
+bertrand2004	method	Bertrand	2004	How Much Should We Trust Differences-In-Differences Estimates?
+wooldridge2023	method	Wooldridge	2023	Simple approaches to nonlinear difference-in-differences with panel data
+chen2024	method	Chen	2024	Logs with Zeros? Some Problems and Solutions
+correia2020	method	Correia	2020	Fast Poisson estimation with high-dimensional fixed effects
+santossilva2006	method	Santos Silva	2006	The Log of Gravity
+athey2021a	method	Athey	2021	Matrix Completion Methods for Causal Panel Data Models
+xu2017	method	Xu	2017	Generalized Synthetic Control Method: Causal Inference with Interactive Fixed Effects Models
+bai2009	method	Bai	2009	Panel Data Models With Interactive Fixed Effects
+arellano1991	method	Arellano	1991	Some Tests of Specification for Panel Data: Monte Carlo Evidence and an Application to Employment Equations
+athey2006	method	Athey	2006	Identification and Inference in Nonlinear Difference-in-Differences Models
+chernozhukov2013	method	Chernozhukov	2013	Inference on Counterfactual Distributions
+firpo2009	method	Firpo	2009	Unconditional Quantile Regressions
+goldsmithpinkham2020	method	Goldsmith-Pinkham	2020	Bartik Instruments: What, When, Why, and How
+borusyak2022	method	Borusyak	2022	Quasi-Experimental Shift-Share Research Designs
+adao2019	method	Adão	2019	Shift-Share Designs: Theory and Inference
+andrews2019a	method	Andrews	2019	Weak Instruments in Instrumental Variables Regression: Theory and Practice
+lee2022	method	Lee	2022	Valid t-Ratio Inference for IV
+montielolea2013	method	Montiel Olea	2013	A Robust Test for Weak Instruments
+young2022	causal	Young	2022	Consistency without Inference: Instrumental Variables in Practical Application
+calonico2014	method	Calonico	2014	Robust Nonparametric Confidence Intervals for Regression-Discontinuity Designs
+cattaneo2020	method	Cattaneo	2020	Simple Local Polynomial Density Estimators
+mccrary2008	method	McCrary	2008	Manipulation of the running variable in the regression discontinuity design: A density test
+gelman2019	method	Gelman	2019	Why High-Order Polynomials Should Not Be Used in Regression Discontinuity Designs
+kolesar2018	method	Kolesár	2018	Inference in Regression Discontinuity Designs with a Discrete Running Variable
+blandhol2022	method	Blandhol	2022	When is TSLS Actually LATE?
+imbens1994	method	Imbens	1994	Identification and Estimation of Local Average Treatment Effects
+frandsen2023	method	Frandsen	2023	Judging Judge Fixed Effects
+dobbie2018	causal	Dobbie	2018	The Effects of Pretrial Detention on Conviction, Future Crime, and Employment: Evidence from Randomly Assigned Judges
+saez2010	method	Saez	2010	Do Taxpayers Bunch at Kink Points?
+kleven2016	method	Kleven	2016	Bunching
+blomquist2021	method	Blomquist	2021	On Bunching and Identification of the Taxable Income Elasticity
+lee2009	method	Lee	2009	Training, Wages, and Sample Selection: Estimating Sharp Bounds on Treatment Effects
+imbens2004	method	Imbens	2004	Confidence Intervals for Partially Identified Parameters
+behaghel2015	method	Behaghel	2015	Please Call Again: Correcting Nonresponse Bias in Treatment Effect Models
+chernozhukov2018a	method	Chernozhukov	2018	Double/debiased machine learning for treatment and structural parameters
+belloni2014	method	Belloni	2014	Inference on Treatment Effects after Selection among High-Dimensional Controls
+knaus2021	method	Knaus	2021	Machine learning estimation of heterogeneous causal effects: Empirical Monte Carlo evidence
+wager2018	method	Wager	2018	Estimation and Inference of Heterogeneous Treatment Effects using Random Forests
+athey2019	method	Athey	2019	Generalized random forests
+chernozhukov2018b	method	Chernozhukov	2018	Generic Machine Learning Inference on Heterogeneous Treatment Effects in Randomized Experiments
+kunzel2019	method	Künzel	2019	Metalearners for estimating heterogeneous treatment effects using machine learning
+athey2021b	method	Athey	2021	Policy Learning With Observational Data
+kitagawa2018	method	Kitagawa	2018	Who Should Be Treated? Empirical Welfare Maximization Methods for Treatment Choice
+kasy2021	method	Kasy	2021	Adaptive Treatment Assignment in Experiments for Policy Choice
+athey2024	method	Athey	2024	Using Wasserstein Generative Adversarial Networks for the design of Monte Carlo simulations
+advani2019	method	Advani	2019	Mostly harmless simulations? Using Monte Carlo studies for estimator selection
+huber2013	method	Huber	2013	The performance of estimators based on the propensity score
+lalonde1986	causal	LaLonde	1986	Evaluating the Econometric Evaluations of Training Programs with Experimental Data
+dehejia1999	method	Dehejia	1999	Causal Effects in Nonexperimental Studies: Reevaluating the Evaluation of Training Programs
+imbens2024	method	Imbens	2024	LaLonde (1986) after Nearly Four Decades: Lessons Learned
+dehejia2021	method	Dehejia	2021	From Local to Global: External Validity in a Fertility Natural Experiment
+hotz2005	method	Hotz	2005	Predicting the efficacy of future training programs using past experiences at other locations
+vivalt2020	meta	Vivalt	2020	How Much Can We Generalize From Impact Evaluations?
+meager2019	method	Meager	2019	Understanding the Average Impact of Microcredit Expansions: A Bayesian Hierarchical Analysis of Seven Randomized Experiments
+dellavigna2022	meta	DellaVigna	2022	RCTs to Scale: Comprehensive Evidence From Two Nudge Units
+athey2019b	method	Athey	2019	The Surrogate Index: Combining Short-Term Proxies to Estimate Long-Term Treatment Effects More Rapidly and Precisely
+imai2010	method	Imai	2010	Identification, Inference and Sensitivity Analysis for Causal Mediation Effects
+prentice1989	method	Prentice	1989	Surrogate endpoints in clinical trials: Definition and operational criteria
+oster2019	method	Oster	2019	Unobservable Selection and Coefficient Stability: Theory and Evidence
+cinelli2020	method	Cinelli	2020	Making sense of sensitivity: extending omitted variable bias
+altonji2005	method	Altonji	2005	Selection on Observed and Unobserved Variables: Assessing the Effectiveness of Catholic Schools
+battaglia2024	method	Battaglia	2024	Inference for Regression with Variables Generated by AI or Machine Learning
+egami2023	method	Egami	2023	Using Imperfect Surrogates for Downstream Inference: Design-based Supervised Learning for Social Science Applications of Large Language Models
+angelopoulos2023	method	Angelopoulos	2023	Prediction-powered inference
+gentzkow2019	method	Gentzkow	2019	Text as Data
+ash2023	method	Ash	2023	Text Algorithms in Economics
+ludwig2025	method	Ludwig	2025	Large Language Models: An Applied Econometric Framework
+horton2023	method	Horton	2023	Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus?
+dell2025	method	Dell	2025	Deep Learning for Economists
+argyle2023	method	Argyle	2023	Out of One, Many: Using Language Models to Simulate Human Samples
+dellavigna2019	meta	DellaVigna	2019	Predict science to improve science
+baker2016	causal	Baker	2016	Measuring Economic Policy Uncertainty
+hassan2019	causal	Hassan	2019	Firm-Level Political Risk: Measurement and Effects
+giannone2008	method	Giannone	2008	Nowcasting: The real-time informational content of macroeconomic data
+shapiro2022	method	Shapiro	2022	Measuring news sentiment
+hansen2018	method	Hansen	2018	Transparency and Deliberation Within the FOMC: A Computational Linguistics Approach
+gertler2015	method	Gertler	2015	Monetary Policy Surprises, Credit Costs, and Economic Activity
+bauer2023	method	Bauer	2023	A Reassessment of Monetary Policy Surprises and High-Frequency Identification
+felten2021	causal	Felten	2021	Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses
+eloundou2024	causal	Eloundou	2024	GPTs are GPTs: Labor market impact potential of LLMs
+dingel2020	causal	Dingel	2020	How many jobs can be done at home?
+henderson2012	method	Henderson	2012	Measuring Economic Growth from Outer Space
+donaldson2016	method	Donaldson	2016	The View from Above: Applications of Satellite Data in Economics
+jean2016	method	Jean	2016	Combining satellite imagery and machine learning to predict poverty
+cavallo2016	method	Cavallo	2016	The Billion Prices Project: Using Online Prices for Measurement and Research
+bajari2023	method	Bajari	2023	Hedonic prices and quality adjusted price indices powered by AI
+pakes2003	method	Pakes	2003	A Reconsideration of Hedonic Price Indexes with an Application to PC's
+cameron2008	method	Cameron	2008	Bootstrap-Based Improvements for Inference with Clustered Errors
+roodman2019	method	Roodman	2019	Fast and wild: Bootstrap inference in Stata using boottest
+mackinnon2023	method	MacKinnon	2023	Cluster-robust inference: A guide to empirical practice
+abadie2023	method	Abadie	2023	When Should You Adjust Standard Errors for Clustering?
+cameron2015	method	Cameron	2015	A Practitioner's Guide to Cluster-Robust Inference
+conley2025	method	Conley	2025	The standard errors of persistence
+conley1999	method	Conley	1999	GMM estimation with cross sectional dependence
+muller2022	method	Müller	2022	Spatial Correlation Robust Inference
+romano2005	method	Romano	2005	Stepwise Multiple Testing as Formalized Data Snooping
+list2019	method	List	2019	Multiple hypothesis testing in experimental economics
+anderson2008	method	Anderson	2008	Multiple Inference and Gender Differences in the Effects of Early Intervention: A Reevaluation of the Abecedarian, Perry Preschool, and Early Training Projects
+young2019	causal	Young	2019	Channeling Fisher: Randomization Tests and the Statistical Insignificance of Seemingly Significant Experimental Results
+lin2013	method	Lin	2013	Agnostic notes on regression adjustments to experimental data: Reexamining Freedman's critique
+athey2017	method	Athey	2017	The Econometrics of Randomized Experiments
+menkveld2024	meta	Menkveld	2024	Nonstandard Errors
+breznau2022	meta	Breznau	2022	Observing many researchers using the same data and hypothesis reveals a hidden universe of uncertainty
+lei2018	method	Lei	2018	Distribution-Free Predictive Inference for Regression
+chernozhukov2021	method	Chernozhukov	2021	An Exact and Robust Conformal Inference Method for Counterfactual and Synthetic Controls
+murphy1985	method	Murphy	1985	Estimation and Inference in Two-Step Econometric Models
+pagan1984	method	Pagan	1984	Econometric Issues in the Analysis of Regressions with Generated Regressors
+kline2012	method	Kline	2012	A Score Based Approach to Wild Bootstrap Inference
+sloczynski2022	method	Słoczyński	2022	Interpreting OLS Estimands When Treatment Effects Are Heterogeneous: Smaller Groups Get Larger Weights
+goldsmithpinkham2024	method	Goldsmith-Pinkham	2024	Contamination Bias in Linear Regressions
+angrist1998	method	Angrist	1998	Estimating the Labor Market Impact of Voluntary Military Service Using Social Security Data on Military Applicants
+bruhn2009	method	Bruhn	2009	In Pursuit of Balance: Randomization in Practice in Development Field Experiments
+camerer2016	meta	Camerer	2016	Evaluating replicability of laboratory experiments in economics
+andrews2019b	method	Andrews	2019	Identification of and Correction for Publication Bias
+brodeur2016	meta	Brodeur	2016	Star Wars: The Empirics Strike Back
+huntingtonklein2021	meta	Huntington-Klein	2021	The influence of hidden researcher decisions in applied microeconomics
+ofosu2023	meta	Ofosu	2023	Pre-Analysis Plans: An Early Stocktaking
+compiani2025	structural	Compiani	2025	Demand Estimation with Text and Image Data
+berry1995	structural	Berry	1995	Automobile Prices in Market Equilibrium
+gandhi2019	structural	Gandhi	2019	Measuring Substitution Patterns in Differentiated-Products Industries
+conlon2020	structural	Conlon	2020	Best practices for differentiated products demand estimation with PyBLP
+nevo2000	structural	Nevo	2000	A Practitioner's Guide to Estimation of Random-Coefficients Logit Models of Demand
+knittel2014	structural	Knittel	2014	Estimation of Random-Coefficient Demand Models: Two Empiricists' Perspective
+berry2014	structural	Berry	2014	Identification in Differentiated Products Markets Using Market Level Data
+compiani2022	structural	Compiani	2022	Market counterfactuals and the specification of multiproduct demand: A nonparametric approach
+rust1987	structural	Rust	1987	Optimal Replacement of GMC Bus Engines: An Empirical Model of Harold Zurcher
+hotz1993	structural	Hotz	1993	Conditional Choice Probabilities and the Estimation of Dynamic Models
+su2012	structural	Su	2012	Constrained Optimization Approaches to Estimation of Structural Models
+arcidiacono2011	structural	Arcidiacono	2011	Conditional Choice Probability Estimation of Dynamic Discrete Choice Models With Unobserved Heterogeneity
+kasahara2009	structural	Kasahara	2009	Nonparametric Identification of Finite Mixture Models of Dynamic Discrete Choices
+wei2025	structural	Wei	2025	Estimating Parameters of Structural Models Using Neural Networks
+kaji2023	structural	Kaji	2023	An Adversarial Approach to Structural Estimation
+farrell2021	method	Farrell	2021	Deep Neural Networks for Estimation and Inference
+mcfadden1989	structural	McFadden	1989	A Method of Simulated Moments for Estimation of Discrete Response Models Without Numerical Integration
+todd2006	structural	Todd	2006	Assessing the Impact of a School Subsidy Program in Mexico: Using a Social Experiment to Validate a Dynamic Behavioral Model of Child Schooling and Fertility
+bajari2007	structural	Bajari	2007	Estimating Dynamic Models of Imperfect Competition
+aguirregabiria2007	structural	Aguirregabiria	2007	Sequential Estimation of Dynamic Discrete Games
+maliar2021	structural	Maliar	2021	Deep learning for solving dynamic economic models
+azinovic2022	structural	Azinovic	2022	Deep Equilibrium Nets
+fernandezvillaverde2023	structural	Fernández-Villaverde	2023	Financial Frictions and the Wealth Distribution
+chetty2009	structural	Chetty	2009	Sufficient Statistics for Welfare Analysis: A Bridge Between Structural and Reduced-Form Methods
+kleven2021	structural	Kleven	2021	Sufficient Statistics Revisited
+guerre2000	structural	Guerre	2000	Optimal Nonparametric Estimation of First-Price Auctions
+athey2011	structural	Athey	2011	Comparing open and Sealed Bid Auctions: Evidence from Timber Auctions
+kawai2022	structural	Kawai	2022	Detecting Large-Scale Collusion in Procurement Auctions
+eaton2002	structural	Eaton	2002	Technology, Geography, and Trade
+dekle2008	structural	Dekle	2008	Global Rebalancing with Gravity: Measuring the Burden of Adjustment
+chetty2008	structural	Chetty	2008	Moral Hazard versus Liquidity and Optimal Unemployment Insurance
+schmieder2012	causal	Schmieder	2012	The Effects of Extended Unemployment Insurance Over the Business Cycle: Evidence from Regression Discontinuity Estimates Over 20 Years
+abowd1999	structural	Abowd	1999	High Wage Workers and High Wage Firms
+kline2020	structural	Kline	2020	Leave-Out Estimation of Variance Components
+bonhomme2019	structural	Bonhomme	2019	A Distributional Framework for Matched Employer Employee Data
+card2013b	structural	Card	2013	Workplace Heterogeneity and the Rise of West German Wage Inequality
+chetty2014	structural	Chetty	2014	Measuring the Impacts of Teachers I: Evaluating Bias in Teacher Value-Added Estimates
+angrist2017	structural	Angrist	2017	Leveraging Lotteries for School Value-Added: Testing and Estimation
+kane2008	structural	Kane	2008	Estimating Teacher Impacts on Student Achievement: An Experimental Evaluation
+bayer2007	structural	Bayer	2007	A Unified Framework for Measuring Preferences for Schools and Neighborhoods
+rosen1974	structural	Rosen	1974	Hedonic Prices and Implicit Markets: Product Differentiation in Pure Competition
+shigeoka2014	causal	Shigeoka	2014	The Effect of Patient Cost Sharing on Utilization, Health, and Risk Protection
+kondo2013	causal	Kondo	2013	Effects of universal health insurance on health care utilization, and supply-side responses: Evidence from Japan
+einav2015	structural	Einav	2015	The Response of Drug Expenditure to Nonlinear Contract Design: Evidence from Medicare Part D
+calvano2020	structural	Calvano	2020	Artificial Intelligence, Algorithmic Pricing, and Collusion
+assad2024	structural	Assad	2024	Algorithmic Pricing and Competition: Empirical Evidence from the German Retail Gasoline Market
+deloecker2012	structural	De Loecker	2012	Markups and Firm-Level Export Status
+ackerberg2015	structural	Ackerberg	2015	Identification Properties of Recent Production Function Estimators
+deloecker2020	structural	De Loecker	2020	The Rise of Market Power and the Macroeconomic Implications
+gourinchas2002	structural	Gourinchas	2002	Consumption Over the Life Cycle
+kaplan2014	structural	Kaplan	2014	A Model of the Consumption Response to Fiscal Stimulus Payments
+abdulkadiroglu2017	structural	Abdulkadiroğlu	2017	The Welfare Effects of Coordinated Assignment: Evidence from the New York City High School Match
+agarwal2018	structural	Agarwal	2018	Demand Analysis Using Strategic Reports: An Application to a School Choice Mechanism
+plagborgmoller2021	method	Plagborg-Møller	2021	Local Projections and VARs Estimate the Same Impulse Responses
+montielolea2021	method	Montiel Olea	2021	Local Projection Inference Is Simpler and More Robust Than You Think
+jorda2005	method	Jordà	2005	Estimation and Inference of Impulse Responses by Local Projections
+stock2018	method	Stock	2018	Identification and Estimation of Dynamic Causal Effects in Macroeconomics Using External Instruments
+nakamura2018	method	Nakamura	2018	Identification in Macroeconomics
+antolindiaz2018	method	Antolín-Díaz	2018	Narrative Sign Restrictions for SVARs
+rubioramirez2010	method	Rubio-Ramírez	2010	Structural Vector Autoregressions: Theory of Identification and Algorithms for Inference
+baumeister2015	method	Baumeister	2015	Sign Restrictions, Structural Vector Autoregressions, and Useful Prior Information
+banbura2010	method	Bańbura	2010	Large Bayesian vector autoregressions
+mccracken2016	method	McCracken	2016	FRED-MD: A Monthly Database for Macroeconomic Research
+diebold1995	method	Diebold	1995	Comparing Predictive Accuracy
+dube2023	method	Dube	2023	A Local Projections Approach to Difference-in-Differences
+gu2020	method	Gu	2020	Empirical Asset Pricing via Machine Learning
+chen2022	meta	Chen	2022	Open Source Cross-Sectional Asset Pricing
+mclean2016	causal	McLean	2016	Does Academic Research Destroy Stock Return Predictability?
+lenza2022	method	Lenza	2022	How to estimate a vector autoregression after March 2020
+schorfheide2021	method	Schorfheide	2021	Real-Time Forecasting with a (Standard) Mixed-Frequency VAR During a Pandemic
+dell2012	causal	Dell	2012	Temperature Shocks and Economic Growth: Evidence from the Last Half Century
+burke2015	causal	Burke	2015	Global non-linear effect of temperature on economic production
+newell2021	causal	Newell	2021	The GDP-Temperature relationship: Implications for climate change damages
+dube2010	causal	Dube	2010	Minimum Wage Effects Across State Borders: Estimates Using Contiguous Counties
+kawaguchi2021	causal	Kawaguchi	2021	Estimating the effects of the minimum wage using the introduction of indexation
+brynjolfsson2025	causal	Brynjolfsson	2025	Generative AI at Work

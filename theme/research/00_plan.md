@@ -85,7 +85,7 @@ AI に大量の論文を読ませ、テーマと仮説を大量に出させ、�
 - sources: 根拠 URL（`;` 区切り、2–5件）
 - rationale: 軸の根拠を「Q:… / N:… / …」の形で簡潔に
 - win_thesis: このチームが勝てる理由／勝てない理由を1–2文
-- status: `pilot`（事前知識だけで採点。出典未調査）／`scored`（出典つきで採点）／`calibrated`（ブラインド再採点で補正済み）
+- status: `pilot`（事前知識だけで採点。出典未調査）／`screened`（一次採点。点は AI の事前知識。近い既存研究は書誌を照合し、データは所在だけ確認）／`scored`（テーマごとに出典を調べて採点）／`calibrated`（ブラインド再採点で補正済み）
 
 ## 出力
 
@@ -96,6 +96,9 @@ id,track,design,cluster,theme,Q,N,R,T,I,W,E,D,X,L,F,C,U,O,S,K,status,nearest,dat
 ```
 
 ```sh
+python3 tools/resolve_refs.py literature/incoming/<名前>_queries.tsv   # 近い既存研究の書誌を引く
+python3 tools/litdb.py merge && python3 tools/litdb.py verify && python3 tools/litdb.py check
+python3 tools/build_themes.py theme/research/incoming/<名前>_themes.tsv theme/research/incoming/<名前>_data.tsv
 python3 tools/score_themes.py            # theme/research/scored.csv を書く
 python3 tools/score_themes.py --top 10   # 上位10件を表示
 python3 portal/build.py                  # ポータルの「星取り表」に反映

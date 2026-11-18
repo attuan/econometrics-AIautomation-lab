@@ -1,0 +1,26 @@
+id	track	first_author	year	title
+lee2023	method	Lee	2023	Computationally feasible identification-robust inference on discrete choice demand
+lee2024	structural	Lee	2024	Essays on Demand Estimation
+gandhi2019	structural	Gandhi	2019	Measuring Substitution Patterns in Differentiated-Products Industries
+berry2021	structural	Berry	2021	Foundations of Demand Estimation
+berry2014	structural	Berry	2014	Identification in Differentiated Products Markets Using Market Level Data
+conlon2020	structural	Conlon	2020	Best practices for differentiated products demand estimation with PyBLP
+reynaert2014	structural	Reynaert	2014	Improving the performance of random coefficients demand models: The role of optimal instruments
+armstrong2016	structural	Armstrong	2016	Large Market Asymptotics for Differentiated Product Demand Estimators With Economic Models of Supply
+andrews2018	method	Andrews	2018	Valid Two-Step Identification-Robust Confidence Sets for GMM
+andrews2019c	method	Andrews	2019	Identification- and singularity-robust inference for moment condition models
+andrews2016	method	Andrews	2016	Conditional Inference with a Functional Nuisance Parameter
+andrews2019a	method	Andrews	2019	Weak Instruments in Instrumental Variables Regression: Theory and Practice
+kleibergen2005	method	Kleibergen	2005	Testing Parameters in GMM Without Assuming that They Are Identified
+stock2000	method	Stock	2000	GMM with Weak Identification
+ketz2019	method	Ketz	2019	On asymptotic size distortions in the random coefficients logit model
+brunner2025	structural	Brunner	2025	Simulation error and numerical instability in estimating random coefficient logit demand models
+duarte2024	structural	Duarte	2024	Testing Firm Conduct
+andrews2025	structural	Andrews	2025	Structural Estimation Under Misspecification: Theory and Implications for Practice
+borusyak2025	structural	Borusyak	2025	Estimating Demand with Recentered Instruments
+frazier2020	method	Frazier	2020	Weak Identification in Discrete Choice Models
+jin2026	structural	Jin	2026	Conditional-Moment Estimation and Inference in the BLP Model
+berry1995	structural	Berry	1995	Automobile Prices in Market Equilibrium
+nevo2000	structural	Nevo	2000	A Practitioner's Guide to Estimation of Random-Coefficients Logit Models of Demand
+petrin2002	structural	Petrin	2002	Quantifying the Benefits of New Products: The Case of the Minivan
+andrews2017	method	Andrews	2017	Measuring the Sensitivity of Parameter Estimates to Estimation Moments

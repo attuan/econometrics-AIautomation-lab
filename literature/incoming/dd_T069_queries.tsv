@@ -1,0 +1,19 @@
+id	track	first_author	year	title
+wei2025	method	Wei	2025	Estimating Parameters of Structural Models Using Neural Networks
+wei2025b	method	Wei	2025	Pre-Training Estimators for Structural Models: Application to Consumer Search
+kaji2023	method	Kaji	2023	An Adversarial Approach to Structural Estimation
+creel2017	method	Creel	2017	Neural nets for indirect inference
+creel2021	method	Creel	2021	Inference Using Simulated Neural Moments
+lueckmann2021	method	Lueckmann	2021	Benchmarking Simulation-Based Inference
+hermans2022	method	Hermans	2022	A Trust Crisis In Simulation-Based Inference? Your Posterior Approximations Can Be Unfaithful
+frazier2024	method	Frazier	2024	The Statistical Accuracy of Neural Posterior and Likelihood Estimation
+huch2026	method	Huch	2026	Amortized Inference for Correlated Discrete Choice Models via Equivariant Neural Networks
+dyer2024	method	Dyer	2024	Black-box Bayesian inference for economic agent-based models
+laplante2026	method	Laplante	2026	Conservative neural posterior estimation via distributionally robust training
+kelly2024	method	Kelly	2024	Misspecification-robust Sequential Neural Likelihood for Simulation-Based Inference
+monteromanso2026	method	Montero-Manso	2026	The Simulacrum: Decision-Theoretic Pretraining for Near-Optimal Time-Series Forecasting and Inference
+shreshtth2026	method	Shreshtth	2026	Neural Architectures for Amortized Bayesian Inference: Statistical Foundations and Empirical Assessments
+kase2025	structural	Kase	2025	Estimating nonlinear heterogeneous agent models with neural networks
+oguz2026	structural	Oguz	2026	Training Neural Networks Embedded in Dynamic Discrete Choice Models
+rawat2026	structural	Rawat	2026	Dynamic Discrete Choice and Inverse Reinforcement Learning: Inferring Preferences and Beliefs From Human Behavior
+rust1987	structural	Rust	1987	Optimal Replacement of GMC Bus Engines: An Empirical Model of Harold Zurcher

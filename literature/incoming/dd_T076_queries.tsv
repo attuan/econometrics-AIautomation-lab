@@ -1,0 +1,15 @@
+id	track	first_author	year	title
+guerre2000	structural	Guerre	2000	Optimal Nonparametric Estimation of First-Price Auctions
+athey2011	structural	Athey	2011	Comparing Open and Sealed Bid Auctions: Evidence from Timber Auctions
+kawai2022	causal	Kawai	2022	Detecting Large-Scale Collusion in Procurement Auctions
+chassang2022	method	Chassang	2022	Robust Screens for Noncompetitive Bidding in Procurement Auctions
+chassang2019	causal	Chassang	2019	Collusion in Auctions with Constrained Bids: Theory and Evidence from Public Procurement
+kawai2023	method	Kawai	2023	Using Bid Rotation and Incumbency to Detect Collusion: A Regression Discontinuity Approach
+ortner2025	causal	Ortner	2025	Scoring and Cartel Discipline in Procurement Auctions
+kawai2026	structural	Kawai	2026	The Value of Privacy in Cartels: An Analysis of the Inner Workings of a Bidding Ring
+nakabayashi2013	structural	Nakabayashi	2013	Small business set-asides in procurement auctions: An empirical analysis
+nakabayashi2016	structural	Nakabayashi	2016	Structural Estimation of the Scoring Auction Model
+hanazono2016	structural	Hanazono	2016	Theory, Identification, and Estimation for Scoring Auctions
+ohashi2009	causal	Ohashi	2009	Effects of Transparency in Procurement Practices on Government Expenditure: A Case Study of Municipal Public Works
+nishikawa2026	causal	Nishikawa	2026	The seemingly collusive 95% rule in public procurement: the case of local governments in Japan
+chassang2025	meta	Chassang	2025	Collusion in Public Procurement

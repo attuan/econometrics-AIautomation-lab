@@ -1,0 +1,28 @@
+code	name	url	tier	synthetic	note	verified
+SYN	合成データ（シミュレーション）と、公開されている再現データ		T0	yes	実データの入手は不要	
+REP	学術誌の再現パッケージ（AEA Data and Code Repository、openICPSR）	https://www.openicpsr.org/openicpsr/aea	T0	no	論文ごとにデータの公開範囲が違う。非公開データを使う論文は対象外になる	
+LALONDE	職業訓練実験（NSW）と比較群のデータ（Dehejia の公開ページ）	https://users.nber.org/~rdehejia/nswdata2.html	T0	no		
+JPAL	J-PAL の実験データ（Harvard Dataverse）	https://dataverse.harvard.edu/dataverse/jpal	T0	no		
+ESTAT	政府統計の総合窓口 e-Stat（公表集計値）	https://www.e-stat.go.jp/	T0	no	個票は別途申請（T1〜T2）	
+EDINET	有価証券報告書（EDINET）	https://disclosure2.edinet-fsa.go.jp/	T0	no		
+WATCHER	景気ウォッチャー調査（内閣府）	https://www5.cao.go.jp/keizai3/watcher/watcher_menu.html	T0	no		
+FOMC	FOMC の公表文・議事録（連邦準備制度理事会）	https://www.federalreserve.gov/monetarypolicy/fomc_historical.htm	T0	no		
+HELLOWORK	求人票（ハローワークインターネットサービス）	https://www.hellowork.mhlw.go.jp/	T1	no	大量取得の可否と利用条件は未確認	
+VIIRS	夜間光データ（VIIRS Nighttime Light）	https://eogdata.mines.edu/products/vnl/	T0	no		
+REINFO	不動産取引価格情報（国土交通省 不動産情報ライブラリ）	https://www.reinfolib.mlit.go.jp/	T0	no		
+OPENALEX	論文の書誌と本文の所在（OpenAlex）	https://openalex.org/	T0	no	本文は論文ごとに公開状況が違う	
+AEAREG	AEA RCT Registry（事前登録）	https://www.socialscienceregistry.org/	T0	no		
+APE	APE プロジェクトの公開論文	https://github.com/SocialCatalystLab/ape-papers	T0	no		
+KILTS	小売のスキャナーデータ（Kilts Center、NielsenIQ）	https://www.chicagobooth.edu/research/kilts/research-data	T1	no	購入・契約が要る	
+PYBLP	需要推定の古典的な公開データ（PyBLP に同梱）	https://pyblp.readthedocs.io/	T0	no		
+RUST	バスのエンジン交換データ（Rust 1987。公開）	https://editorialexpress.com/jrust/nfxp.html	T0	no		
+PPORTAL	公共調達の入札結果（調達ポータル）	https://www.p-portal.go.jp/	T0	no		
+COMTRADE	国際貿易統計（UN Comtrade）	https://comtradeplus.un.org/	T0	no		
+MICRO	公的統計・行政記録の個票（オンサイト利用など）	https://www.e-stat.go.jp/microdata/	T2	no	利用申請と審査が要る	
+TANKER	ドイツのガソリン小売価格（Tankerkönig の公開データ）	https://creativecommons.tankerkoenig.de/	T0	no		
+JHPS	日本家計パネル調査（慶應義塾大学）	https://www.pdrc.keio.ac.jp/paneldata/datasets/jhpskhps/	T1	no	利用申請が要る	
+FRED	米国のマクロ月次データ（FRED-MD）	https://www.stlouisfed.org/research/economists/mccracken/fred-databases	T0	no		2026-11-14 にページの内容を確認。月次と四半期の CSV、実時間の版（毎月）、変数の説明の付録がある
+BOJ	日本銀行 時系列統計データ	https://www.stat-search.boj.or.jp/	T0	no		
+JST	長期マクロ歴史データ（Jordà-Schularick-Taylor Macrohistory Database）	https://www.macrohistory.net/database/	T0	no		
+OAP	株式収益率の予測変数（Open Source Asset Pricing）	https://www.openassetpricing.com/	T0	no		
+PWT	国別パネル（Penn World Table）	https://www.rug.nl/ggdc/productivity/pwt/	T0	no	気温データは別途	

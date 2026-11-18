@@ -59,7 +59,7 @@
 - **人**: ポータルの星取り表で、4群の点を見比べる。重く見たい項目で並べ替え、偏らない組合せで上位10個を承認する。
 - **大事にすること**: 捨てる勇気。「識別できるか」「検出できるか」を重要度と同じ重さで見る。落とした理由も残す。
 - **成果物**: `theme/research/themes.csv`, `scored.csv`、`theme/paper/main.tex`
-- **実例**: [研究テーマをどう選ぶか](theme/paper/main.tex)、[星取り表](theme/research/themes.csv)（12テーマの試行採点）
+- **実例**: [研究テーマをどう選ぶか](theme/paper/main.tex)、[星取り表](theme/research/themes.csv)（計量経済学の100テーマの一次採点）
 
 ### 2. 10テーマをディープダイブする ◆
 

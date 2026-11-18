@@ -208,11 +208,16 @@ def themes_page(site):
         "themes": [{k: (float(v) if k in axes or k == "K" else v) for k, v in r.items() if k in keep} for r in rows],
     }
     n_pilot = sum(r.get("status") == "pilot" for r in rows)
+    n_screen = sum(r.get("status") == "screened" for r in rows)
+    n_cap = sum(bool(r["capped"]) for r in rows)
     banner = ""
     if n_pilot:
         banner = (f'<div class="box pitfall"><div class="box-title">試行採点です</div><p>{len(rows)}件中{n_pilot}件は、AI の事前知識だけで採点した試行である。'
-                  "出典調査をしておらず、順位は仕組みの動作見本にすぎない。テーマ選定の根拠にしないこと。"
-                  "新規性とデータ入手性は、根拠の欄が空なので上限2点で計算している。</p></div>")
+                  "出典調査をしておらず、順位は仕組みの動作見本にすぎない。テーマ選定の根拠にしないこと。</p></div>")
+    elif n_screen:
+        banner = (f'<div class="box pitfall"><div class="box-title">一次採点です</div><p>{len(rows)}件中{n_screen}件は一次採点である。'
+                  "点は AI の事前知識にもとづく。近い既存研究は書誌を照合しただけで、本文は読んでいない。データは所在を確かめただけで、必要な変数の有無は見ていない。"
+                  f"根拠の欄が空で上限2点になっているテーマが{n_cap}件ある。上位の候補は、選ぶ前に個別の調査（段階2）で確かめること。</p></div>")
     body = f"""<h1>星取り表：テーマを選ぶ</h1>
 <div class="box chaptermap"><div class="box-title">このページの使い方</div>
 <ol><li><b>4つの点を見る。</b>問いの価値・信頼性・実行可能性・競争と出口。合計は4つの掛け算なので、1つが弱いと全体が下がる。</li>

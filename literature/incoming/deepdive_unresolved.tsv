@@ -1,0 +1,29 @@
+id	track	first_author	year	title	reason
+siegmann2025	method	Siegmann	2025	Under-Coverage of Double Machine Learning Due to Implementation Choices	Crossref に一致なし／arXiv に一致なし
+egami2024	method	Egami	2024	Using Large Language Model Annotations for the Social Sciences: A General Framework of Using Predicted Variables in Downstream Analyses	Crossref に一致なし／arXiv に一致なし
+shibata2026	causal	Shibata	2026	企業の決算説明会テキストを用いた経済政策不確実性の考察	Crossref に一致なし／arXiv に一致なし
+liu2024	causal	Liu	2024	Managerial Ownership, Modification of Business Risk Disclosure and Investors Risk Perception: Evidence from Japan	Crossref に一致なし／arXiv に一致なし
+fujitani2021	causal	Fujitani	2021	Effects of Economic Policy Uncertainty on Corporate Investment and Strategic Cash Holdings: Evidence from Japan	Crossref に一致なし／arXiv に一致なし
+morikawa2018	causal	Morikawa	2018	Uncertainty of Business Outlook and Investment: Evidence from firm-level panel data	Crossref に一致なし／arXiv に一致なし
+ito2026	causal	Ito	2026	Firm Heterogeneity in Responses to Trump Tariffs 2.0: Evidence from Japanese manufacturing firms	Crossref に一致なし／arXiv に一致なし
+todoroki2026	structural	Todoroki	2026	Unveiling Demand Function Dynamics: A Scalable, Cross-Market Estimation Using Point-of-Sale Data	Crossref に一致なし／arXiv に一致なし
+mcclure2026	structural	McClure	2026	Using Default Recommendations in Demand Estimation	Crossref に一致なし／arXiv に一致なし
+lee2025	structural	Lee	2025	Generative Brand Choice	Crossref に一致なし／arXiv に一致なし
+lee2023	method	Lee	2023	Computationally feasible identification-robust inference on discrete choice demand	Crossref に一致なし／arXiv に一致なし
+lee2024	structural	Lee	2024	Essays on Demand Estimation	Crossref に一致なし／arXiv に一致なし
+kasahara2012	structural	Kasahara	2012	Sequential Estimation of Structural Models With a Fixed Point Constraint	Crossref に一致なし／arXiv に一致なし
+blevins2026	structural	Blevins	2026	Nested Pseudo-Likelihood Estimation of Dynamic Discrete Games: A Replication of Aguirregabiria and Mira (2007)	Crossref に一致なし／arXiv に一致なし
+imai2009	structural	Imai	2009	Bayesian Estimation of Dynamic Discrete Choice Models	Crossref に一致なし／arXiv に一致なし
+norets2009	structural	Norets	2009	Inference in Dynamic Discrete Choice Models With Serially Correlated Unobserved State Variables	Crossref に一致なし／arXiv に一致なし
+gomes2021	structural	Gomes	2021	Essays on Dynamic Discrete Choice Models	Crossref に一致なし／arXiv に一致なし
+nakabayashi2016	structural	Nakabayashi	2016	Structural Estimation of the Scoring Auction Model	Crossref に一致なし／arXiv に一致なし
+hanazono2016	structural	Hanazono	2016	Theory, Identification, and Estimation for Scoring Auctions	Crossref に一致なし／arXiv に一致なし
+chassang2025	meta	Chassang	2025	Collusion in Public Procurement	Crossref に一致なし／arXiv に一致なし
+brynjolfsson2025b	causal	Brynjolfsson	2025	Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence	Crossref に一致なし／arXiv に一致なし
+cerina2026	causal	Cerina	2026	Generative AI and Posted Labor Demand: Volume, Seniority and Timing	Crossref に一致なし／arXiv に一致なし
+massenkoff2026	causal	Massenkoff	2026	Labor market impacts of AI: A new measure and early evidence	Crossref に一致なし／arXiv に一致なし
+dodini2026	causal	Dodini	2026	Job postings show early signs of AI automation impact	Crossref に一致なし／arXiv に一致なし
+hartley2026	causal	Hartley	2026	The Labor Market Effects of Generative Artificial Intelligence and Job Loss Fears	Crossref に一致なし／arXiv に一致なし
+fukao2026	causal	Fukao	2026	Automation Risk, Innovative Capital, and Labour Market Outcomes: Evidence from Japan	Crossref に一致なし／arXiv に一致なし
+morikawa2024	causal	Morikawa	2024	Macroeconomic Impact of Artificial Intelligence on Productivity: An estimate from a survey	Crossref に一致なし／arXiv に一致なし
+shinozaki2022	structural	Shinozaki	2022	The Effect of AI on Wages in Japan Using Computable General Equilibrium Model	Crossref に一致なし／arXiv に一致なし

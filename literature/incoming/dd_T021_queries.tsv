@@ -1,0 +1,18 @@
+id	track	first_author	year	title
+siegmann2025	method	Siegmann	2025	Under-Coverage of Double Machine Learning Due to Implementation Choices
+ahrens2025	method	Ahrens	2025	An Introduction to Double/Debiased Machine Learning
+ahrens2024	method	Ahrens	2024	Model Averaging and Double Machine Learning
+bach2024	method	Bach	2024	Hyperparameter Tuning for Causal Inference with Double Machine Learning: A Simulation Study
+baiardi2024	method	Baiardi	2024	The value added of machine learning to causal inference: evidence from revisited studies
+fuhr2024	method	Fuhr	2024	Estimating Causal Effects with Double Machine Learning - A Method Evaluation
+chernozhukov2018	method	Chernozhukov	2018	Double/debiased machine learning for treatment and structural parameters
+angrist2022	method	Angrist	2022	Machine Labor
+knaus2022	method	Knaus	2022	Double machine learning-based programme evaluation under unconfoundedness
+ritzwoller2023	method	Ritzwoller	2023	Reproducible Aggregation of Sample-Split Statistics
+velez2024	method	Velez	2024	Debiased Machine Learning with Many Cross-Fitting Folds
+saco2025	method	Saco	2025	Ill-Conditioned Orthogonal Scores in Double Machine Learning
+williams2026	method	Williams	2026	Improving reproducibility by controlling random seed stability in machine learning based estimation via bagging
+naimi2024	method	Naimi	2024	Pseudo-Random Number Generator Influences on Average Treatment Effect Estimates Obtained with Machine Learning
+xu2026a	method	Xu	2026	Analytical and Bootstrap Confidence Intervals for Double Machine Learning: Simulation Studies and an Application to Rural-Urban Differences in Obesity Prevalence
+xu2026b	meta	Xu	2026	Scaling Reproducibility: An AI-Assisted Workflow for Large-Scale Replication and Reanalysis
+habibnia2026	method	Habibnia	2026	Double Machine Learning for Panel Data: Identification, Specification, and a Bank Regulation Effect

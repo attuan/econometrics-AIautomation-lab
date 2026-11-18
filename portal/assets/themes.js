@@ -47,7 +47,7 @@
     let h = '<thead><tr><th>候補</th><th>順</th><th>型</th><th>テーマ</th>' + GROUPS.map((g, i) => th('g' + i, g, 'gh')).join('') + th('total', '合計', '')
       + (showAxes ? D.axes.map(a => th(a.id, a.id, 'ax', `${a.group}：${a.name}`)).join('') : '') + '</tr></thead><tbody>';
     rows.forEach(({ t, s, g }, i) => {
-      const badges = (t.status === 'pilot' ? '<span class="badge pilot">試行</span>' : '') + (t.capped ? `<span class="badge flag">根拠なし: ${esc(t.capped)}</span>` : '');
+      const badges = (t.status === 'pilot' ? '<span class="badge pilot">試行</span>' : t.status === 'screened' ? '<span class="badge pilot">一次採点</span>' : '') + (t.capped ? `<span class="badge flag">根拠なし: ${esc(t.capped)}</span>` : '');
       h += `<tr data-id="${t.id}" class="${selected === t.id ? 'on' : ''}">`
         + `<td><input type="checkbox" aria-label="${t.id} を候補に入れる" ${picked.has(t.id) ? 'checked' : ''}></td><td class="num">${i + 1}</td>`
         + `<td>${esc(D.tracks[t.track] || t.track)}<br><span class="sub">${esc(t.design || '')}</span></td>`
