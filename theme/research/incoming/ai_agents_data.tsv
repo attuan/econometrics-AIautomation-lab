@@ -1,0 +1,5 @@
+code	name	url	tier	synthetic	note	verified
+AGSIM	LLM エージェントに行わせた実験の記録（自分で生成する）と、公刊論文の公表値		T0	yes	実データの入手は不要。API の利用料が要る。人の基準は公刊値を使い、個票の公開範囲は未確認	
+SCE	ニューヨーク連銀 Survey of Consumer Expectations の公開個票と、LLM エージェントの実験記録	https://www.newyorkfed.org/microeconomics/sce	T0	no	個票は遅れて公開される	
+GHA	GH Archive（GitHub の公開イベントの記録）	https://www.gharchive.org/	T0	no	導入の特定にはリポジトリ内の設定ファイルの取得が別に要る。アカウント名を含むので集計して扱う	
+TWIN	Twin-2K-500（Hugging Face で公開）	https://huggingface.co/datasets/LLM-Digital-Twin/Twin-2K-500	T0	no	利用条件は未確認	

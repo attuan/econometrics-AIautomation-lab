@@ -26,3 +26,6 @@ DECISIONS.md
 # ポータルの生成物と図のキャッシュ
 portal/dist/
 portal/.cache/
+
+# npm（package.json は Python の道具を呼ぶだけ）
+node_modules/

@@ -128,6 +128,7 @@ table.hoshi td.total { font-size: 1.1rem; }
 .video { aspect-ratio: 16 / 10; margin: 1em auto; }
 .video iframe { width: 100%; height: 100%; border: 1px solid var(--line); border-radius: 10px; background: #0f1626; }
 .videolist { line-height: 1.7; }
+.videonote { font-size: .9rem; color: var(--muted); margin-top: -.3em; }
 
 @media (max-width: 860px) {
   #menu { display: block; }

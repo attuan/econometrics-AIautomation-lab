@@ -123,7 +123,8 @@ class Site:
         return re.sub(r'data-src="([^"]+)"', rep, body)
 
 
-def md_page(site, src, out, title=None, cls="doc"):
+def md_page(site, src, out, title=None, cls="doc", video=None):
+    """video: 題と冒頭の注記のすぐ下に埋め込む動画プレイヤーの URL（このページからの相対）。"""
     text = src.read_text(encoding="utf-8")
     if out == "index.html":  # トップページでは、編集者むけの冒頭の注記（> で始まる行）を出さない
         text = re.sub(r"(?m)\A(# .*\n\n)(?:>.*\n)+", r"\1", text)
@@ -136,6 +137,13 @@ def md_page(site, src, out, title=None, cls="doc"):
             warn(f"{src.relative_to(ROOT)}: 画像が無い: {a}")
     depth = out.count("/")
     body = body.replace('src="@root/', 'src="' + "../" * depth)
+    if video:
+        player = (f'<div class="video"><iframe src="{esc(video)}" title="動画プレイヤー" allow="autoplay"></iframe></div>'
+                  f'<p class="videonote">動画で3〜4分。内容は下の文書にあるものだけ。<a href="{esc(video)}">プレイヤーだけを開く</a></p>')
+        head = body.find("<h2")
+        cut = body.find("</blockquote>", 0, head if head >= 0 else len(body))
+        cut = cut + len("</blockquote>") if cut >= 0 else body.find("</h1>") + len("</h1>")
+        body = body[:cut] + player + body[cut:]
     return site.add(out, title or first_heading(src), body, src=src.relative_to(ROOT), source=str(src.relative_to(ROOT)), cls=cls)
 
 
@@ -276,8 +284,8 @@ def specs_page(site, proj):
     return site.add(f"{proj.name}/specs.html", "推定の記録", body, src=src.relative_to(ROOT), source=str(src.relative_to(ROOT)), cls="wide")
 
 
-def video_page(site, base, name):
-    """<base>/video/ を丸ごとコピーし、プレイヤーを埋め込むページを作る。"""
+def copy_videos(base, name):
+    """<base>/video/ を丸ごとコピーし、動画の (id, 題, 副題) を返す。"""
     vdir = base / "video"
     shutil.copytree(vdir, DIST / name / "video", dirs_exist_ok=True)
     if (base / "paper/figs").is_dir():
@@ -288,6 +296,12 @@ def video_page(site, base, name):
         m = {k: re.search(rf"\b{k}\s*:\s*(['\"])(.*?)\1", t) for k in ("id", "title", "subtitle")}
         if m["id"] and m["title"]:
             vids.append((m["id"].group(2), m["title"].group(2), m["subtitle"].group(2) if m["subtitle"] else ""))
+    return vids
+
+
+def video_page(site, base, name):
+    """プレイヤーを埋め込んだ、動画だけのページを作る。"""
+    vids = copy_videos(base, name)
     items = "".join(f'<li><a href="video/index.html#{esc(i)}" target="player"><b>{esc(t)}</b></a>　{esc(s)}</li>' for i, t, s in vids)
     body = (f"<h1>動画</h1><p class='lead'>図と字幕で内容をつかむ。再生ボタンを押すと始まる。読み上げは切り替えられる。</p>"
             f'<div class="video"><iframe name="player" src="video/index.html" title="動画プレイヤー" allow="autoplay"></iframe></div>'
@@ -331,8 +345,15 @@ def main():
     site.nav.append(("1. テーマ選定", th))
 
     dd = [md_page(site, ROOT / "deepdive/README.md", "deepdive/index.html", title="ディープダイブとは")]
+    # 動画は独立したページにせず、各テーマのページの冒頭に埋め込む（videos/<TID>.js がある文書だけ）
+    dd_vids = set()
+    if (ROOT / "deepdive/video/index.html").exists():
+        dd_vids = {i for i, _, _ in copy_videos(ROOT / "deepdive", "deepdive")}
     for src in sorted((ROOT / "deepdive").glob("T*.md")):
-        dd.append(md_page(site, src, f"deepdive/{src.stem}.html"))
+        dd.append(md_page(site, src, f"deepdive/{src.stem}.html",
+                          video=f"video/index.html#{src.stem}" if src.stem in dd_vids else None))
+    for i in sorted(dd_vids - {p.stem for p in (ROOT / "deepdive").glob("T*.md")}):
+        warn(f"deepdive/video/videos/{i}.js: 対応する文書 deepdive/{i}.md が無い")
     site.nav.append(("2. ディープダイブ", dd))
 
     for proj in projects():

@@ -172,6 +172,9 @@ python3 portal/build.py                                # ポータル（変換�
 python3 -m http.server -d portal/dist 4321             # http://localhost:4321 で見る
 ```
 
+- npm からも呼べる（`package.json`。中身は上の Python コマンドを呼ぶだけで、依存パッケージは無い）。
+  `npm start`（ポータルを作って http://localhost:4321 で開く）、`npm run build`、`npm run serve`、`npm run figs`、`npm run themes`、`npm run lit`。
+
 - `portal/build.py` は PDF を作らない。**先に latexmk で main.pdf を作る**。
 - 必要なツール: TeX Live（lualatex, latexmk, biber）、Ghostscript（gs）、R、Python 3（標準ライブラリのみ）。
 - 生成物（`portal/dist/`）は手で直さない。直すときは正本を直して作り直す。
