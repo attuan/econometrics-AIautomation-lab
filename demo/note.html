@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>研究ノート | AI ネイティブ経済学ラボ</title>
+<link rel="stylesheet" href="../assets/site.css"><script>MathJax={tex:{inlineMath:[['\\(','\\)']],tags:'ams'}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script></head>
+<body>
+<header class="top"><button id="menu" aria-label="目次を開く">☰</button><a class="brand" href="../index.html">AI ネイティブ経済学ラボ</a></header>
+<div class="layout">
+<nav id="side"><h2>ラボ</h2><ul><li><a href="../index.html">はじめに</a></li><li><a href="../guide/video.html">動画で見る</a></li><li><a href="../lab/agents.html">研究のまとめ方</a></li><li><a href="../lab/ethics.html">倫理規定</a></li></ul><h2>文献</h2><ul><li><a href="../literature/index.html">文献マスター表</a></li><li><a href="../literature/howto.html">表の書式と手順</a></li></ul><h2>1. テーマ選定</h2><ul><li><a href="../theme/hoshitori.html">星取り表</a></li><li><a href="../theme/index.html">テーマをどう選ぶか</a></li><li><a href="../theme/plan.html">採点の手順</a></li><li><a href="../theme/axes_review.html">軸の見直し（調査と提案）</a></li><li><a href="../theme/if_predictor.html">題目と要旨から IF を当てる（非公開）</a></li><li><a href="../theme/contribution_types.html">評価される貢献とは何か（メタ研究の構想）</a></li><li><a href="../theme/sources.html">出典の照合記録</a></li></ul><h2>2. ディープダイブ</h2><ul><li><a href="../deepdive/index.html">ディープダイブとは</a></li><li><a href="../deepdive/T021.html">T021　二重機械学習の実務上の落とし穴の系統的な点検</a></li><li><a href="../deepdive/T031.html">T031　LLM が作った変数を回帰に使うときの測定誤差の補正</a></li><li><a href="../deepdive/T036.html">T036　有価証券報告書のテキストから作る不確実性指標と設備投資</a></li><li><a href="../deepdive/T039.html">T039　テキスト・画像の埋め込みを回帰の説明変数に使うときの推論</a></li><li><a href="../deepdive/T063.html">T063　製品の文章と画像から特性を作る需要推定</a></li><li><a href="../deepdive/T065.html">T065　需要推定の操作変数の強さの診断と、弱いときの推論</a></li><li><a href="../deepdive/T068.html">T068　観測されない異質性をもつ動学モデルの推定法の小標本での性能</a></li><li><a href="../deepdive/T069.html">T069　ニューラルネットによる構造パラメータの推定：精度・速度・推論の検証</a></li><li><a href="../deepdive/T076.html">T076　公共調達の入札データによる入札モデルの構造推定</a></li><li><a href="../deepdive/T099.html">T099　生成 AI の普及が職種別の求人と賃金に与える効果</a></li><li><a href="../deepdive/T105.html">T105　AI 購買エージェントの探索と需要の構造推定：順位・価格への反応と、プラットフォームの反実仮想</a></li><li><a href="../deepdive/T109.html">T109　人の被験者と LLM エージェントを混ぜた実験の推定量と最適配分</a></li></ul><h2>動作見本：合成データで差の差の手続きを点検する</h2><ul><li><a href="../demo/index.html">入口</a></li><li><a class="on" aria-current="page" href="../demo/note.html">研究ノート</a></li><li><a href="../demo/hypotheses.html">研究仮説</a></li><li><a href="../demo/specs.html">推定の記録</a></li></ul></nav>
+<main class="doc"><h1>動作見本：系列相関のあるパネルで、単純な差の差は偽陽性率を保つが、効果0.3は検出できない</h1>
+<p class="byline">AI ネイティブ経済学ラボ（見本） ・ 2026年11月14日（最終更新）</p><p class="pdf"><a href="note.pdf">PDF で読む</a></p>
+<div class="box abstract"><div class="box-title">要旨</div><p>これはラボの仕組みを見せるための見本であり、データはすべて合成である。
+200単位×10期の合成パネルで、差の差の手続きを2通り点検した。
+真の効果が0のときの棄却率は、単位ごとの前後差で6.2%、観測を独立とみなす OLS で6.4%だった（各500回）。
+「独立とみなす OLS は偽陽性が増える」という事前の予想（H2）は、この設定では外れた。
+効果0.3での検出力は66.8%で、80%に届かなかった。</p></div>
+<div class="box chaptermap"><div class="box-title">この文書の地図</div><p><b>3行でいうと</b></p>
+<ol><li>背景：分析コードを実データに当てる前に、答えの分かっている合成データで手続きを確かめる（段階6）。</li><li>仮説：H1 偽陽性率は保たれる、H2 独立とみなすと偽陽性が増える、H3 効果0.3を検出できる。</li><li>現状：H1 支持、H2 棄却、H3 棄却。未ロック。結果はすべて合成データの区分である。</li></ol></div>
+<h2>1　背景と問い</h2>
+<p><span id="sec:demo-bg"></span>
+差の差では、同じ単位を何期も観測する。誤差が時間を通じて相関していると、観測を独立とみなした標準誤差は信用できない場合がある。
+どの程度ずれるかは、設定（期の数、処置の時点、相関の強さ）に依存する。
+だから、自分のデータと同じ構造の合成データで確かめる。</p>
+<div class="box term"><div class="box-title">用語：偽陽性率と検出力</div><p>偽陽性率は、真の効果が0なのに「効果あり」と判定する割合である。5%水準の検定なら5%が目標になる。
+検出力は、真の効果があるときに「効果あり」と判定できる割合である。80%を目安にすることが多い。</p></div>
+<h2>2　先行研究</h2>
+<p><span id="sec:demo-prior"></span>
+見本なので、文献調査はしていない。実プロジェクトでは、ここに転換点の論文5〜10本の表を置く。
+関連する方法論の文献として、事前に決めることの利点と限界（<a href="#ref-olken2015">Olken, 2015</a>）、
+検定を通過した後の推定の歪み（<a href="#ref-roth2022">Roth, 2022</a>）、仕様を網羅して示す方法（<a href="#ref-simonsohn2020">Simonsohn et al., 2020</a>）、
+有意な結果への偏りの実態（<a href="#ref-brodeur2020">Brodeur et al., 2020</a>）がある。</p>
+<h2>3　研究仮説</h2>
+<p><span id="sec:demo-hyp"></span></p>
+<div class="box hypothesis"><div class="box-title">仮説：H1 単位ごとの前後差は偽陽性率を保つ</div><p><b>仮説</b>：真の効果が0のとき、5%水準の検定が棄却する割合は3〜7%に収まる。<br>
+<b>成功基準</b>：棄却率が0.03以上0.07以下（500回での標準誤差は約0.01）。<br>
+<b>棄却条件</b>：棄却率が0.03未満または0.07超。<br>
+<b>状態</b>：支持（2026-11-14）。ただし基準は結果を見た後に書いた。</p></div>
+<div class="box hypothesis"><div class="box-title">仮説：H2 独立とみなす OLS は偽陽性が増える</div><p><b>仮説</b>：真の効果が0のとき、棄却率は7%を超える。<br>
+<b>根拠</b>：系列相関があると標準誤差が小さくなりすぎる、という筆者の事前の予想。<br>
+<b>成功基準</b>：棄却率が0.07超。　<b>棄却条件</b>：棄却率が0.07以下。<br>
+<b>状態</b>：棄却（2026-11-14）。この仮説だけが、結果を見る前に立てたものである。</p></div>
+<div class="box hypothesis"><div class="box-title">仮説：H3 効果0.3を検出力80%で検出できる</div><p><b>仮説</b>：真の効果0.3での棄却率は80%以上になる。<br>
+<b>成功基準</b>：棄却率が0.80以上。　<b>棄却条件</b>：棄却率が0.80未満。<br>
+<b>状態</b>：棄却（2026-11-14）。基準は結果を見た後に書いた。</p></div>
+<h2>4　データ</h2>
+<p><span id="sec:demo-data"></span>
+合成パネルを <code>sim/mc_check.R</code> で生成する。単位は200、期は10、第6期から処置、処置群は半数である。
+結果変数は式<span class='math'>\(\ref{eq:demo-dgp}\)</span>で作る。乱数の種は20261114である。</p>
+<div class='math'>\begin{equation}
+  y_{it} = \alpha_i + 0.05\,t + \tau D_{it} + \varepsilon_{it}, \qquad
+  \varepsilon_{it} = 0.6\,\varepsilon_{i,t-1} + u_{it}
+  \label{eq:demo-dgp}
+\end{equation}</div>
+<p><span class='math'>\(\alpha_i\)</span> は標準偏差1の単位固定効果、<span class='math'>\(\varepsilon_{it}\)</span> は標準偏差1の誤差、<span class='math'>\(D_{it}\)</span> は処置群の処置後で1をとる。
+真の効果 <span class='math'>\(\tau\)</span> は0、0.1、0.2、0.3、0.5の5通りを試す。</p>
+<h2>5　識別戦略と推定</h2>
+<p><span id="sec:demo-design"></span></p>
+<div class="box design"><div class="box-title">識別戦略・方法：2つの手続き</div><p><b>単位ごとの前後差（did_unit）</b>：単位ごとに「処置後の平均−処置前の平均」を取り、処置群と対照群の平均の差を推定値とする。標準誤差は単位を独立とみなして計算する。<br>
+<b>独立とみなす OLS（naive_ols）</b>：単位×期の2000観測に、処置群・処置後・交差項を入れた OLS を当て、通常の標準誤差を使う。<br>
+<b>評価</b>：各設定で500回くり返し、偏り・95%信頼区間の被覆率・棄却率を測る。<br>
+<b>推論</b>：棄却率0.05のモンテカルロ標準誤差は <span class='math'>\(\sqrt{0.05\times0.95/500}\approx0.01\)</span> である。</p></div>
+<h2>6　予想される結果</h2>
+<p><span id="sec:demo-expected"></span>
+シミュレーションの前に筆者が予想していたのは、H2（独立とみなす OLS の棄却率が7%を超える）だけである。
+H1 と H3 の数値基準は、結果を見た後に書いた。したがって、確証と呼べるのは H2 の判定だけである。</p>
+<h2>7　結果</h2>
+<p><span id="sec:demo-result"></span></p>
+<div class="box result"><div class="box-title">結果：H1・H2 の点検（2026-11-14、合成データ）</div><p><b>何をした</b>：真の効果0で500回。<br>
+<b>何が分かった</b>：棄却率は did_unit で0.062、naive_ols で0.064。被覆率は0.938と0.936（表<a href="#tab:demo-mc">1</a>）。<br>
+<b>判定</b>：H1 は支持（0.03〜0.07の範囲内）。H2 は棄却（0.07を超えなかった）。</p></div>
+<div class="box result"><div class="box-title">結果：H3 の点検（2026-11-14、合成データ）</div><p><b>何をした</b>：真の効果0.3で500回。<br>
+<b>何が分かった</b>：did_unit の棄却率は0.668。効果0.5では0.974（図<a href="#fig:demo-power">1</a>）。<br>
+<b>判定</b>：H3 は棄却。検出力80%に届く効果は0.3と0.5の間にある。</p></div>
+<figure class="tab" id="tab:demo-mc"><figcaption><b>表1</b>　シミュレーションの結果（各500回、合成データ）。全行は <code>data/sim/mc_summary.csv</code>。</figcaption><div class="tablewrap"><table><thead><tr><th>真の効果</th><th>手続き</th><th>偏り</th><th>標準誤差の平均</th><th>被覆率</th><th>棄却率</th></tr></thead><tbody><tr><td>0</td><td>did_unit</td><td>0.0005</td><td>0.1255</td><td>0.938</td><td>0.062</td></tr><tr><td>0</td><td>naive_ols</td><td>0.0005</td><td>0.1260</td><td>0.936</td><td>0.064</td></tr><tr class=sep><td>0.1</td><td>did_unit</td><td>0.0045</td><td>0.1259</td><td>0.938</td><td>0.134</td></tr><tr><td>0.2</td><td>did_unit</td><td><span class='math'>\(-0.0032\)</span></td><td>0.1254</td><td>0.958</td><td>0.332</td></tr><tr><td>0.3</td><td>did_unit</td><td><span class='math'>\(-0.0046\)</span></td><td>0.1256</td><td>0.948</td><td>0.668</td></tr><tr><td>0.5</td><td>did_unit</td><td><span class='math'>\(-0.0045\)</span></td><td>0.1257</td><td>0.952</td><td>0.974</td></tr></tbody></table></div></figure>
+<figure class="fig" id="fig:demo-power"><img class="fig" src="note_files/demo_power.png" alt=""><figcaption><b>図1</b>　真の効果ごとの棄却率（各500回、合成データ）。効果0での値が偽陽性率、それ以外が検出力である。2つの手続きはほぼ重なる。データは <code>data/sim/mc_summary.csv</code>、作図は <code>code/02_figs.R</code>。</figcaption></figure>
+<h2>8　考察</h2>
+<p><span id="sec:demo-discussion"></span>
+H2 が外れた理由は、設定にあると考えられる（筆者の見解、未検証）。
+この設定では、処置前と処置後が5期ずつで、処置群と対照群が同数である。
+単位固定効果は前後差で消え、系列相関は前後の平均の差のばらつきを小さくする方向に働く。
+2つの効果が打ち消し合い、独立とみなした標準誤差がたまたま合った可能性がある。
+期の数や相関の強さを変えれば、結論は変わりうる。</p>
+<div class="box pitfall"><div class="box-title">落とし穴</div><p>「この設定で問題が出なかった」は、「この手続きは安全だ」を意味しない。
+確かめたのは1つの設定だけである。自分のデータの構造に合わせて <code>PARAMS</code> を書き換え、もう一度測る必要がある。</p></div>
+<h2>9　判断と次の一手</h2>
+<p><span id="sec:demo-decision"></span></p>
+<div class="box decision"><div class="box-title">判断（Go/No-Go）</div><p><b>結論</b>：見本として完了。研究としては進めない。<br>
+<b>理由</b>：仕組み（仮説の箱、結果の箱、仕様の記録、R と Python の照合）が端から端まで動くことを確かめるのが目的だった。<br>
+<b>次の一手</b>：実プロジェクトでは <code>_template</code> をコピーし、段階4の終わりに人が承認してロックする。</p></div>
+<h2>更新履歴</h2>
+<ul><li>2026-11-14：作成。H2 は事前の予想、H1 と H3 の基準は結果を見た後に追加。</li></ul>
+<h2 id="refs">参考文献</h2><ul class="refs"><li id="ref-brodeur2020">Brodeur, Abel, Cook, Nikolai, Heyes, Anthony（2020）「Methods Matter: p-Hacking and Publication Bias in Causal Analysis in Economics」American Economic Review 110 (11) 3634–3660 <a href="https://doi.org/10.1257/aer.20190687">doi:10.1257/aer.20190687</a> <a class="pdflink" href="https://docs.iza.org/dp11796.pdf">PDF</a></li><li id="ref-olken2015">Olken, Benjamin A.（2015）「Promises and Perils of Pre-analysis Plans」Journal of Economic Perspectives 29 (3) 61–80 <a href="https://doi.org/10.1257/jep.29.3.61">doi:10.1257/jep.29.3.61</a> <a class="pdflink" href="https://www.aeaweb.org/articles/pdf/doi/10.1257/jep.29.3.61">PDF</a></li><li id="ref-roth2022">Roth, Jonathan（2022）「Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends」American Economic Review: Insights 4 (3) 305–322 <a href="https://doi.org/10.1257/aeri.20210236">doi:10.1257/aeri.20210236</a></li><li id="ref-simonsohn2020">Simonsohn, Uri, Simmons, Joseph P., Nelson, Leif D.（2020）「Specification curve analysis」Nature Human Behaviour 4 (11) 1208–1214 <a href="https://doi.org/10.1038/s41562-020-0912-z">doi:10.1038/s41562-020-0912-z</a></li></ul>
+<footer>正本: <code>demo/paper/main.tex</code>。このページは自動生成。直すときは正本を直して <code>python3 portal/build.py</code>。</footer>
+</main></div>
+<script>document.getElementById('menu').onclick=()=>document.body.classList.toggle('nav-open');</script>
+</body></html>

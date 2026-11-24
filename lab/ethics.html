@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>倫理規定 | AI ネイティブ経済学ラボ</title>
+<link rel="stylesheet" href="../assets/site.css"></head>
+<body>
+<header class="top"><button id="menu" aria-label="目次を開く">☰</button><a class="brand" href="../index.html">AI ネイティブ経済学ラボ</a></header>
+<div class="layout">
+<nav id="side"><h2>ラボ</h2><ul><li><a href="../index.html">はじめに</a></li><li><a href="../guide/video.html">動画で見る</a></li><li><a href="../lab/agents.html">研究のまとめ方</a></li><li><a class="on" aria-current="page" href="../lab/ethics.html">倫理規定</a></li></ul><h2>文献</h2><ul><li><a href="../literature/index.html">文献マスター表</a></li><li><a href="../literature/howto.html">表の書式と手順</a></li></ul><h2>1. テーマ選定</h2><ul><li><a href="../theme/hoshitori.html">星取り表</a></li><li><a href="../theme/index.html">テーマをどう選ぶか</a></li><li><a href="../theme/plan.html">採点の手順</a></li><li><a href="../theme/axes_review.html">軸の見直し（調査と提案）</a></li><li><a href="../theme/if_predictor.html">題目と要旨から IF を当てる（非公開）</a></li><li><a href="../theme/contribution_types.html">評価される貢献とは何か（メタ研究の構想）</a></li><li><a href="../theme/sources.html">出典の照合記録</a></li></ul><h2>2. ディープダイブ</h2><ul><li><a href="../deepdive/index.html">ディープダイブとは</a></li><li><a href="../deepdive/T021.html">T021　二重機械学習の実務上の落とし穴の系統的な点検</a></li><li><a href="../deepdive/T031.html">T031　LLM が作った変数を回帰に使うときの測定誤差の補正</a></li><li><a href="../deepdive/T036.html">T036　有価証券報告書のテキストから作る不確実性指標と設備投資</a></li><li><a href="../deepdive/T039.html">T039　テキスト・画像の埋め込みを回帰の説明変数に使うときの推論</a></li><li><a href="../deepdive/T063.html">T063　製品の文章と画像から特性を作る需要推定</a></li><li><a href="../deepdive/T065.html">T065　需要推定の操作変数の強さの診断と、弱いときの推論</a></li><li><a href="../deepdive/T068.html">T068　観測されない異質性をもつ動学モデルの推定法の小標本での性能</a></li><li><a href="../deepdive/T069.html">T069　ニューラルネットによる構造パラメータの推定：精度・速度・推論の検証</a></li><li><a href="../deepdive/T076.html">T076　公共調達の入札データによる入札モデルの構造推定</a></li><li><a href="../deepdive/T099.html">T099　生成 AI の普及が職種別の求人と賃金に与える効果</a></li><li><a href="../deepdive/T105.html">T105　AI 購買エージェントの探索と需要の構造推定：順位・価格への反応と、プラットフォームの反実仮想</a></li><li><a href="../deepdive/T109.html">T109　人の被験者と LLM エージェントを混ぜた実験の推定量と最適配分</a></li></ul><h2>動作見本：合成データで差の差の手続きを点検する</h2><ul><li><a href="../demo/index.html">入口</a></li><li><a href="../demo/note.html">研究ノート</a></li><li><a href="../demo/hypotheses.html">研究仮説</a></li><li><a href="../demo/specs.html">推定の記録</a></li></ul></nav>
+<main class="doc"><h1 id="このラボの倫理規定">このラボの倫理規定</h1>
+<blockquote class="note">状態: <b>草案</b>（2026-11-14）。人が読んで承認するまで仮の規定である。承認したら <code>DECISIONS.md</code> D5 に日付を書く。<br>人もエージェントも、作業の前にこの規定に従う。迷ったら作業を止めて、人に上げる。</blockquote>
+<h2 id="3行で言うと">3行で言うと</h2>
+<ol><li><b>作らない・曲げない・隠さない。</b> 存在しない文献や数値を書かない。都合の悪い結果を消さない。</li><li><b>データの持ち主と、データに写っている人を守る。</b> AI に読ませることは、外部に送ることと同じである。</li><li><b>責任は人が負う。</b> AI は下書きをする。確かめて名前を出すのは人である。</li></ol>
+<h2 id="優先順位">優先順位</h2>
+<p>上にあるものが優先する。この規定は、上の規則が無い所を埋めるためのものである。</p>
+<ol><li>法令（個人情報の保護に関する法律、統計法など）</li><li>所属機関の規程と、倫理審査委員会の判断</li><li>データ提供者との契約・利用規約</li><li>投稿先の学会・学術誌の規程</li><li>この規定</li></ol>
+<h2 id="条文">条文</h2>
+<p>各条に、守るための仕組み（どのファイル・道具が支えるか）を書く。仕組みが無い条は、人の点検だけが頼りである。</p>
+<h3 id="第1条-誠実-捏造-改ざん-盗用をしない">第1条 誠実：捏造・改ざん・盗用をしない</h3>
+<ul><li>存在しないデータ・結果・文献を作らない。結果を都合よく書き換えない。他人の文章・着想・コードを、出典を示さずに使わない。</li><li>AI は、もっともらしい文献や数値を作ってしまうことがある。だから、DOI は照合したものだけを書き、数値は出所のファイルを示す。</li><li>合成データの結果は、必ず「合成データ」と書く。予想値は「仮定」と書く。</li><li><b>仕組み</b>: <code>tools/verify_dois.py</code>、<code>log/specs.csv</code> の <code>stage = synthetic</code>、読んだ深さの記録（<code>research/</code> のメモ）。</li></ul>
+<h3 id="第2条-透明性-見る前に決め-走らせた推定をすべて残す">第2条 透明性：見る前に決め、走らせた推定をすべて残す</h3>
+<ul><li>結果を見る前に、仮説・推定の方法・成功基準と棄却条件を書く。</li><li>走らせた推定は全件記録する。事前に決めた分析（確証）と、結果を見た後の分析（探索）を書き分ける。</li><li><b>仕組み</b>: <code>tools/lock_pap.py</code>、<code>code/lib/speclog.R</code>、<code>code/lib/speclog.py</code>。</li></ul>
+<h3 id="第3条-都合の悪い結果を消さない">第3条 都合の悪い結果を消さない</h3>
+<ul><li>有意でない結果、仮説を否定する結果、やめた仮説を、日付と理由を付けて残す。</li><li>論文に載せる結果を選ぶときは、載せなかった結果が何本あり、何を示したかを書く。</li><li><b>仕組み</b>: <code>main.tex</code> の <code>result</code> 箱（古い結果を消さない）、<code>hypotheses.json</code> の <code>status</code> と <code>note</code>、監査の観点④。</li></ul>
+<h3 id="第4条-データの持ち主と-写っている人を守る">第4条 データの持ち主と、写っている人を守る</h3>
+<ul><li>データは、利用規約・契約・申請で認められた範囲でだけ使う。再配布の可否を確かめる。</li><li>外部の AI サービス（このリポジトリで動くエージェントを含む）にデータを読ませることは、外部への送信である。秘匿区分に従う。<ul><li>T0 公開: 生データを読ませてよい。</li><li>T1 制限: コードを書かせ、集計値と推定結果だけを見せる。</li><li>T2 秘匿: 合成データでコードを書かせる。実行は人が行い、持ち出し審査を通った結果だけを正本に入れる。</li></ul></li><li>区分が書かれていないデータは T2 として扱う。個人を特定できる情報は、区分にかかわらず AI に読ませない。</li><li>個人や企業を特定できる集計（人数の少ないセル）を公開しない。</li><li><b>仕組み</b>: <code>&lt;project&gt;/data/README.md</code>（来歴・利用条件・区分）、<code>.gitignore</code>（生データを git に入れない）。</li></ul>
+<h3 id="第5条-人を対象とする研究は-審査を経てから">第5条 人を対象とする研究は、審査を経てから</h3>
+<ul><li>調査・実験・聞き取りで人からデータを集める研究は、所属機関の倫理審査を経てから始める。</li><li>エージェントは、人に対して自分から連絡・募集・送信をしない。調査票や実験の実施は人が行う。</li><li><b>仕組み</b>: <code>&lt;project&gt;/data/README.md</code> の「倫理審査・利用申請の記録」。</li></ul>
+<h3 id="第6条-AI-の利用-開示し-人が責任を負う">第6条 AI の利用：開示し、人が責任を負う</h3>
+<ul><li>成果物の著者は人である。AI は著者にならない。</li><li>AI をどの作業に使ったかを記録し、投稿先の規程に従って開示する。規程が無ければ、方法の節か謝辞に書く。</li><li>AI の出力（要約・コード・数値）は、人が原文・実行結果で確かめてから使う。確かめていないものは「未確認」と書く。</li><li>◆の判断（テーマ・仮説・ロック・公開）は人が行う。エージェントは代わりに決めない。</li><li><b>仕組み</b>: <code>decision</code> 箱、更新履歴、<code>theme/research/sources.md</code>（読んだ深さ）。</li></ul>
+<h3 id="第7条-他者の成果への敬意">第7条 他者の成果への敬意</h3>
+<ul><li>事実と着想には出典を付ける。図・データ・コードは、ライセンスを確かめて使う。</li><li>追試で元の研究と違う結果が出たときは、違いの原因を調べ、公開の前に元の著者に知らせることを検討する。</li><li>このラボの進め方は、INDXDev/indx-lab の設計を参考にした。コードは書き直している。</li></ul>
+<h3 id="第8条-利益相反と資金の開示">第8条 利益相反と資金の開示</h3>
+<ul><li>研究の資金源、データ提供者との関係、結果に利害を持つ立場があれば、成果物に書く。</li></ul>
+<h3 id="第9条-再現できる形で公開する">第9条 再現できる形で公開する</h3>
+<ul><li>公開する結果は、公開できるデータとコードから再現できるようにする。公開できないデータは、入手手順を書く。</li><li><b>仕組み</b>: <code>Rscript code/00_run_all.R</code> が端から端まで通ること、<code>log/sessionInfo.txt</code>、監査の観点⑥。</li></ul>
+<h3 id="第10条-公開するライブラリへの責任">第10条 公開するライブラリへの責任</h3>
+<ul><li>ライブラリには、ライセンス・使い方・テスト・既知の限界を付ける。</li><li>推定量を実装するときは、どの条件で正しく、どの条件で誤るかを文書に書く。誤用されやすい既定値を置かない。</li><li><b>仕組み</b>: <code>_template/python/</code>（テストと README の雛形）、段階6のシミュレーション。</li></ul>
+<h3 id="第11条-疑わしいときは止める">第11条 疑わしいときは止める</h3>
+<ul><li>この規定に反するおそれに気づいたら、人もエージェントも作業を止め、何が起きたかを <code>research/</code> に書いて人に上げる。</li><li>誤りに気づいたら、隠さずに直し、更新履歴に書く。公開済みなら訂正を出す。</li></ul>
+<h2 id="根拠にした文書">根拠にした文書</h2>
+<div class="tablewrap"><table><thead><tr><th>文書</th><th>この規定のどこに使ったか</th><th>確認</th></tr></thead><tbody><tr><td>American Economic Association, *Code of Professional Conduct*（2018）<a href="https://www.aeaweb.org/about-aea/code-of-conduct">https://www.aeaweb.org/about-aea/code-of-conduct</a></td><td>第1・2・8条。誠実さは、研究の実施と発表における正直さ・注意深さ・透明性と、利益相反の開示を求める、という原則</td><td>2026-11-14 にページ本文を確認</td></tr><tr><td>American Economic Association, *Data and Code Availability Policy* <a href="https://www.aeaweb.org/journals/data/data-code-policy">https://www.aeaweb.org/journals/data/data-code-policy</a></td><td>第9条</td><td>ページの存在を確認。本文は未確認</td></tr><tr><td>文部科学省「研究活動における不正行為への対応等に関するガイドライン」（2014年8月）<a href="https://www.mext.go.jp/b_menu/houdou/26/08/1351568.htm">https://www.mext.go.jp/b_menu/houdou/26/08/1351568.htm</a></td><td>第1条（捏造・改ざん・盗用）</td><td>ページの題名を確認。本文は未確認</td></tr><tr><td>個人情報の保護に関する法律 <a href="https://laws.e-gov.go.jp/law/415AC0000000057">https://laws.e-gov.go.jp/law/415AC0000000057</a></td><td>第4条</td><td>URL の応答を確認。条文は未確認</td></tr><tr><td>統計法 <a href="https://laws.e-gov.go.jp/law/419AC0000000053">https://laws.e-gov.go.jp/law/419AC0000000053</a></td><td>第4条（公的統計の個票の利用）</td><td>URL の応答を確認。条文は未確認</td></tr><tr><td>Christensen &amp; Miguel (2018), Olken (2015), Burlig (2018)（<code>theme/common/refs.bib</code>）</td><td>第2・3条</td><td>書誌を Crossref で照合。本文は未確認</td></tr></tbody></table></div>
+<p>「未確認」の行は、人が原文を読んで、条文の書き方が合っているか確かめる必要がある。 所属機関の研究倫理規程と、投稿先の生成 AI に関する規程は、まだ調べていない。分かったら「優先順位」に従って条文を直す。</p>
+<footer>正本: <code>ETHICS.md</code>。このページは自動生成。直すときは正本を直して <code>python3 portal/build.py</code>。</footer>
+</main></div>
+<script>document.getElementById('menu').onclick=()=>document.body.classList.toggle('nav-open');</script>
+</body></html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>出典の照合記録 | AI ネイティブ経済学ラボ</title>
+<link rel="stylesheet" href="../assets/site.css"></head>
+<body>
+<header class="top"><button id="menu" aria-label="目次を開く">☰</button><a class="brand" href="../index.html">AI ネイティブ経済学ラボ</a></header>
+<div class="layout">
+<nav id="side"><h2>ラボ</h2><ul><li><a href="../index.html">はじめに</a></li><li><a href="../guide/video.html">動画で見る</a></li><li><a href="../lab/agents.html">研究のまとめ方</a></li><li><a href="../lab/ethics.html">倫理規定</a></li></ul><h2>文献</h2><ul><li><a href="../literature/index.html">文献マスター表</a></li><li><a href="../literature/howto.html">表の書式と手順</a></li></ul><h2>1. テーマ選定</h2><ul><li><a href="../theme/hoshitori.html">星取り表</a></li><li><a href="../theme/index.html">テーマをどう選ぶか</a></li><li><a href="../theme/plan.html">採点の手順</a></li><li><a href="../theme/axes_review.html">軸の見直し（調査と提案）</a></li><li><a href="../theme/if_predictor.html">題目と要旨から IF を当てる（非公開）</a></li><li><a href="../theme/contribution_types.html">評価される貢献とは何か（メタ研究の構想）</a></li><li><a class="on" aria-current="page" href="../theme/sources.html">出典の照合記録</a></li></ul><h2>2. ディープダイブ</h2><ul><li><a href="../deepdive/index.html">ディープダイブとは</a></li><li><a href="../deepdive/T021.html">T021　二重機械学習の実務上の落とし穴の系統的な点検</a></li><li><a href="../deepdive/T031.html">T031　LLM が作った変数を回帰に使うときの測定誤差の補正</a></li><li><a href="../deepdive/T036.html">T036　有価証券報告書のテキストから作る不確実性指標と設備投資</a></li><li><a href="../deepdive/T039.html">T039　テキスト・画像の埋め込みを回帰の説明変数に使うときの推論</a></li><li><a href="../deepdive/T063.html">T063　製品の文章と画像から特性を作る需要推定</a></li><li><a href="../deepdive/T065.html">T065　需要推定の操作変数の強さの診断と、弱いときの推論</a></li><li><a href="../deepdive/T068.html">T068　観測されない異質性をもつ動学モデルの推定法の小標本での性能</a></li><li><a href="../deepdive/T069.html">T069　ニューラルネットによる構造パラメータの推定：精度・速度・推論の検証</a></li><li><a href="../deepdive/T076.html">T076　公共調達の入札データによる入札モデルの構造推定</a></li><li><a href="../deepdive/T099.html">T099　生成 AI の普及が職種別の求人と賃金に与える効果</a></li><li><a href="../deepdive/T105.html">T105　AI 購買エージェントの探索と需要の構造推定：順位・価格への反応と、プラットフォームの反実仮想</a></li><li><a href="../deepdive/T109.html">T109　人の被験者と LLM エージェントを混ぜた実験の推定量と最適配分</a></li></ul><h2>動作見本：合成データで差の差の手続きを点検する</h2><ul><li><a href="../demo/index.html">入口</a></li><li><a href="../demo/note.html">研究ノート</a></li><li><a href="../demo/hypotheses.html">研究仮説</a></li><li><a href="../demo/specs.html">推定の記録</a></li></ul></nav>
+<main class="doc"><h1 id="評価軸の出典-照合と読んだ深さ">評価軸の出典：照合と読んだ深さ</h1>
+<p>正本は文献マスター表 <code>literature/papers.csv</code>（読んだ深さは <code>read_depth</code> 列）。<code>theme/common/refs.bib</code> はそこから生成する。本文は <code>theme/paper/main.tex</code>。 このメモは、マスター表を作る前の照合の記録として残す。</p>
+<h2 id="照合-2026-11-14">照合（2026-11-14）</h2>
+<ul><li>DOI つき20件: <code>python3 tools/verify_dois.py theme/common/refs.bib</code> で、Crossref の題名と年が全件一致。</li><li><code>@online</code> 6件: URL が HTTP 200 で応答することを確認。</li></ul>
+<h2 id="読んだ深さ">読んだ深さ</h2>
+<div class="tablewrap"><table><thead><tr><th>文献</th><th>今回読んだ範囲</th><th>本文での使い方</th></tr></thead><tbody><tr><td>heilmeier</td><td>ページ本文（8つの問いを確認）</td><td>問いの文言を引用</td></tr><tr><td>aeacode</td><td>ページ本文（冒頭の原則を確認）</td><td>誠実さ・透明性・利益相反の開示を引用</td></tr><tr><td>aeadata, josscriteria, hamming1986, indxlab</td><td>ページの存在と題名（indxlab はリポジトリを読んだ）</td><td>概要のみ</td></tr><tr><td>DOI つき20件</td><td><b>書誌のみ。本文・要旨は今回開いていない</b></td><td>AI の事前知識にもとづく1文の要約。数値は引用していない</td></tr></tbody></table></div>
+<p><b>人が原文で確かめるまで、DOI つき20件の要約は「未確認」として扱う。</b> 確かめたら、この表の「今回読んだ範囲」を書き換え、確認者と日付を残す。</p>
+<h2 id="2026-11-14-追加分-軸の見直し">2026-11-14 追加分（軸の見直し）</h2>
+<p>DOI つき2件（brodeur2026ai, andrews2020）は Crossref で照合した。<code>@online</code> 6件の読んだ範囲は <code>axes_review.md</code> の末尾の表にある。 li2026 は要旨と評価項目の部分、jdeprr と unjournal はページ本文、zhu2026・shin2026・si2024 は要旨まで。brodeur2026ai と andrews2020 は書誌のみ。</p>
+<h2 id="捨てた候補">捨てた候補</h2>
+<div class="tablewrap"><table><thead><tr><th>候補</th><th>理由</th></tr></thead><tbody><tr><td>Ioannidis ほか 2017 の「検出力の中央値」の具体値</td><td>原文で数値を確かめていないので書かない。「検出力が低い研究が多い」とだけ書いた</td></tr><tr><td>AEA の生成 AI 利用方針のページ</td><td>想定した URL が 404。所在を確かめるまで引かない</td></tr><tr><td>日本経済学会の倫理に関する規程</td><td>所在を確認できていない。確認できたら倫理規定に足す</td></tr></tbody></table></div>
+<footer>正本: <code>theme/research/sources.md</code>。このページは自動生成。直すときは正本を直して <code>python3 portal/build.py</code>。</footer>
+</main></div>
+<script>document.getElementById('menu').onclick=()=>document.body.classList.toggle('nav-open');</script>
+</body></html>

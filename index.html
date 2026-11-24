@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>はじめに | AI ネイティブ経済学ラボ</title>
+<link rel="stylesheet" href="assets/site.css"></head>
+<body>
+<header class="top"><button id="menu" aria-label="目次を開く">☰</button><a class="brand" href="index.html">AI ネイティブ経済学ラボ</a></header>
+<div class="layout">
+<nav id="side"><h2>ラボ</h2><ul><li><a class="on" aria-current="page" href="index.html">はじめに</a></li><li><a href="guide/video.html">動画で見る</a></li><li><a href="lab/agents.html">研究のまとめ方</a></li><li><a href="lab/ethics.html">倫理規定</a></li></ul><h2>文献</h2><ul><li><a href="literature/index.html">文献マスター表</a></li><li><a href="literature/howto.html">表の書式と手順</a></li></ul><h2>1. テーマ選定</h2><ul><li><a href="theme/hoshitori.html">星取り表</a></li><li><a href="theme/index.html">テーマをどう選ぶか</a></li><li><a href="theme/plan.html">採点の手順</a></li><li><a href="theme/axes_review.html">軸の見直し（調査と提案）</a></li><li><a href="theme/if_predictor.html">題目と要旨から IF を当てる（非公開）</a></li><li><a href="theme/contribution_types.html">評価される貢献とは何か（メタ研究の構想）</a></li><li><a href="theme/sources.html">出典の照合記録</a></li></ul><h2>2. ディープダイブ</h2><ul><li><a href="deepdive/index.html">ディープダイブとは</a></li><li><a href="deepdive/T021.html">T021　二重機械学習の実務上の落とし穴の系統的な点検</a></li><li><a href="deepdive/T031.html">T031　LLM が作った変数を回帰に使うときの測定誤差の補正</a></li><li><a href="deepdive/T036.html">T036　有価証券報告書のテキストから作る不確実性指標と設備投資</a></li><li><a href="deepdive/T039.html">T039　テキスト・画像の埋め込みを回帰の説明変数に使うときの推論</a></li><li><a href="deepdive/T063.html">T063　製品の文章と画像から特性を作る需要推定</a></li><li><a href="deepdive/T065.html">T065　需要推定の操作変数の強さの診断と、弱いときの推論</a></li><li><a href="deepdive/T068.html">T068　観測されない異質性をもつ動学モデルの推定法の小標本での性能</a></li><li><a href="deepdive/T069.html">T069　ニューラルネットによる構造パラメータの推定：精度・速度・推論の検証</a></li><li><a href="deepdive/T076.html">T076　公共調達の入札データによる入札モデルの構造推定</a></li><li><a href="deepdive/T099.html">T099　生成 AI の普及が職種別の求人と賃金に与える効果</a></li><li><a href="deepdive/T105.html">T105　AI 購買エージェントの探索と需要の構造推定：順位・価格への反応と、プラットフォームの反実仮想</a></li><li><a href="deepdive/T109.html">T109　人の被験者と LLM エージェントを混ぜた実験の推定量と最適配分</a></li></ul><h2>動作見本：合成データで差の差の手続きを点検する</h2><ul><li><a href="demo/index.html">入口</a></li><li><a href="demo/note.html">研究ノート</a></li><li><a href="demo/hypotheses.html">研究仮説</a></li><li><a href="demo/specs.html">推定の記録</a></li></ul></nav>
+<main class="doc"><h1 id="AI-ネイティブ経済学ラボとは">AI ネイティブ経済学ラボとは</h1>
+<h2 id="3行で言うと">3行で言うと</h2>
+<ol><li><b>問いと研究デザインを大量に作って、速く捨てる。</b> AI が論文を大量に読み、テーマ100→10→1、仮説100→10 と絞る。選ぶのは人である。</li><li><b>結果を見る前に、論文を大方書いておく。</b> 仮説・推定の方法・予想される結果・棄却条件を先に書き、弱い仮説は紙の上で落とす。</li><li><b>すべてを1か所（正本）に書き、人には軽く見せる。</b> 走らせた推定も棄却した仮説も残す。図・動画・ポータルで、誰でも3分で全体をつかめるようにする。</li></ol>
+<h2 id="全体像-上から順に進む">全体像：上から順に進む</h2>
+<figure><img src="common/figs/lab_flow.svg" alt=""><figcaption>図1 研究の流れ。8段階を上から順に進む。◆は人が判断する関門。5〜7は毎日回すループ。</figcaption></figure>
+<p>人が判断する関門（◆）は5か所ある。<b>①テーマを10個に絞る、②着手するテーマを決める、③仮説を10個選ぶ、④結果前論文を承認してロックする、⑧公開するか決める。</b> 残りの⑤⑥⑦は AI が毎日回し、人は結果を確かめる。</p>
+<h2 id="大事にする3つの原則">大事にする3つの原則</h2>
+<figure><img src="common/figs/lab_principles.svg" alt=""><figcaption>図2 3つの原則。左の情報をすべて正本に入れ、AI エージェントが読み書きし、右の形で人に見せる。</figcaption></figure>
+<div class="tablewrap"><table><thead><tr><th>原則</th><th>意味</th><th>具体的には</th></tr></thead><tbody><tr><td>① すべてを1か所に</td><td>文献・データの来歴・識別の議論・判断・棄却した仮説を、すべて正本に書く</td><td>会話で終わらせない。PDF とポータルは正本から自動で作る。古い結果も消さない</td></tr><tr><td>② AI ネイティブに回す</td><td>調査・整理・執筆・作図・コード・推定は、まず AI エージェントがやる</td><td>人の仕事は「問いを立てる・◆で判断する・データの利用許可を取る・AI の出力を確かめる」の4つに絞る</td></tr><tr><td>③ 人には軽く見せる</td><td>情報が増えるほど認知負荷は上がる。量を増やすほど、見せ方を軽くする</td><td>結論を先に書く。1枚図・星取り表・動画・決まった箱を使う</td></tr></tbody></table></div>
+<h2 id="3つのトラック">3つのトラック</h2>
+<p>因果推論だけに絞らない。テーマには必ずトラックを1つ付け、同じ軸で比べる。</p>
+<div class="tablewrap"><table><thead><tr><th>トラック</th><th>何をする研究か</th><th>「結果を見る前に書く」もの</th><th>シミュレーター（段階6）</th><th>主な成果</th></tr></thead><tbody><tr><td>因果推論・実証</td><td>政策や出来事の効果を、外生変動を使って推定する</td><td>推定対象・推定式・標本の定義・反証テスト</td><td>合成データで推定量の偏りと検出力を点検する</td><td>実証論文</td></tr><tr><td>構造推定</td><td>経済モデルのパラメータを推定し、反実仮想を計算する</td><td>モデル・推定に使うモーメント・当てはまりを確かめる取り置きデータ</td><td>モデルそのもの。合成データでパラメータを回収できるか</td><td>実証論文＋推定コード</td></tr><tr><td>推定量・計量手法</td><td>新しい推定量・検定・計算手法を作り、性質を示す</td><td>主張する性質・比べる既存手法・シミュレーションの設定と評価指標</td><td>モンテカルロ実験が主役</td><td>手法論文＋ライブラリ</td></tr></tbody></table></div>
+<h2 id="通常の研究とどこが違うか">通常の研究とどこが違うか</h2>
+<div class="tablewrap"><table><thead><tr><th></th><th>通常の研究</th><th>AI ネイティブ経済学ラボ</th></tr></thead><tbody><tr><td>テーマの選び方</td><td>手元のデータと関心から1つ選ぶ</td><td>100個を15軸で採点し、根拠を残して10→1に絞る</td></tr><tr><td>先行研究</td><td>数十本を人が読む</td><td>数百本を AI が読み、推定値・標準誤差・手法を表にする</td></tr><tr><td>仮説</td><td>少数を温める</td><td>100個作って10個選ぶ。全部に数値の棄却条件を付ける</td></tr><tr><td>論文を書く時期</td><td>結果が出てから</td><td><b>結果を見る前に</b>書く。表の枠と予想値、Go/No-Go まで書く</td></tr><tr><td>仕様の探索</td><td>記録に残らない</td><td>走らせた推定は全件残る。何本試したかが分かる</td></tr><tr><td>査読</td><td>投稿後に初めて受ける</td><td>投稿前に、別のエージェントが査読者として監査する</td></tr><tr><td>成果</td><td>論文</td><td>論文に加えて、再現パッケージとライブラリ</td></tr><tr><td>知の置き場</td><td>人の頭の中</td><td>ポータル。新しく来た人も AI も、同じ地図から始められる</td></tr></tbody></table></div>
+<h2 id="8つの段階-何をして-何を大事にするか">8つの段階：何をして、何を大事にするか</h2>
+<p>各段階で <b>AI が下書きし、人が確かめる</b>。◆の段階では、人が判断して理由を <code>decision</code> 箱に書く。</p>
+<h3 id="1-テーマを100個出し-10個に絞る">1. テーマを100個出し、10個に絞る ◆</h3>
+<ul><li><b>AI</b>: 分野とトラックを横断して候補を100個出し、15軸で採点する。別のエージェントがブラインドで再採点し、甘辛を補正する。</li><li><b>人</b>: ポータルの星取り表で、4群の点を見比べる。重く見たい項目で並べ替え、偏らない組合せで上位10個を承認する。</li><li><b>大事にすること</b>: 捨てる勇気。「識別できるか」「検出できるか」を重要度と同じ重さで見る。落とした理由も残す。</li><li><b>成果物</b>: <code>theme/research/themes.csv</code>, <code>scored.csv</code>、<code>theme/paper/main.tex</code></li><li><b>実例</b>: <a href="theme/index.html">研究テーマをどう選ぶか</a>、<a href="theme/hoshitori.html">星取り表</a>（計量経済学の100テーマの一次採点）</li></ul>
+<h3 id="2-10テーマをディープダイブする">2. 10テーマをディープダイブする ◆</h3>
+<ul><li><b>AI</b>: 1テーマ1文書。文献の地図・未解決の問い・使えるデータと入手手順・識別の手がかり・競合・6か月計画を書く。</li><li><b>人</b>: 文書と動画を見て、着手するテーマを1〜2個に決める。</li><li><b>大事にすること</b>: 読んだ人が5分で選べること。データは「あるらしい」で終わらせず、申請手順・期間・費用・公開可否まで調べる。</li><li><b>成果物</b>: <code>deepdive/&lt;TID&gt;.md</code></li></ul>
+<h3 id="3-仮説を100個作り-10個選ぶ">3. 仮説を100個作り、10個選ぶ ◆</h3>
+<ul><li><b>AI</b>: 先行研究から、5つの型（延長・尖り・組合せ・異分野転用・追試と拡張）で仮説を作る。各仮説に、根拠論文・検証方法・必要なデータ・<b>数値の成功基準と棄却条件</b>を付ける。</li><li><b>人</b>: 信頼性・検出力・新規性・重要度で10個を選ぶ。</li><li><b>大事にすること</b>: 数値の棄却条件がない仮説は、仮説として扱わない。どちらの結果でも知見になる問いを優先する。</li><li><b>成果物</b>: <code>&lt;project&gt;/hypotheses/hypotheses.json</code>、<code>main.tex</code> の <code>hypothesis</code> 箱</li></ul>
+<h3 id="4-結果を見る前に-論文として書く">4. 結果を見る前に、論文として書く ◆</h3>
+<ul><li><b>AI</b>: 要旨→背景→先行研究→仮説→データ→方法→予想される結果→考察→Go/No-Go の順で、論文の形で書く。表は枠だけ作り、予想値は「仮定」と明記する。</li><li><b>人</b>: 「この結果が出たら何が言えるか」を確かめる。良ければ承認し、ロックする（下の「ロックとは何か」）。</li><li><b>大事にすること</b>: 書いてみて弱い仮説は、時間を使う前に落とす。方法は再現できる粒度で書く。</li><li><b>成果物</b>: <code>&lt;project&gt;/paper/main.tex</code>、<code>&lt;project&gt;/prereg/LOCK.json</code></li></ul>
+<h3 id="5-文献をデータにする">5. 文献をデータにする</h3>
+<ul><li><b>AI</b>: 論文から推定値・標準誤差・標本・手法を表にする。「なぜその仕様か」の記述は文章のまま出典つきで残す。</li><li><b>人</b>: 抽出結果を原文と抜き取りで照合する（例: 50件）。精度を記録する。</li><li><b>大事にすること</b>: 効果の大きさの見当はここから付ける。都合のよい1本だけを使わない。</li><li><b>成果物</b>: <code>literature/papers.csv</code>（文献マスター表。1文献1行）、<code>&lt;project&gt;/research/estimates.csv</code>（1推定値1行）</li></ul>
+<h3 id="6-シミュレーターを作り込む">6. シミュレーターを作り込む</h3>
+<ul><li><b>AI</b>: 真の答えが分かっている合成データを作り、推定の手続きが答えを回収できるかを測る。構造推定ではモデル自体をここに置く。手法の研究ではここが主役になる。</li><li><b>人</b>: 合成データの前提が、制度と実データの成り立ちに合っているか確かめる。</li><li><b>大事にすること</b>: うまく回収できない設定こそ記録する。分析コードは合成データで端から端まで通してから、実データに当てる。</li><li><b>成果物</b>: <code>&lt;project&gt;/sim/</code>、<code>&lt;project&gt;/data/sim/</code></li></ul>
+<h3 id="7-推定し-すべての仕様を記録する-5-7は毎日回す">7. 推定し、すべての仕様を記録する（5〜7は毎日回す）</h3>
+<ul><li><b>AI</b>: ロックした仕様を推定する。走らせた推定は全件 <code>log/specs.csv</code> に残す。頑健性と反証テストを出し、<code>result</code> 箱を日付つきで足す。</li><li><b>人</b>: 制度の知識で結果を疑う。データの異常を確かめる。</li><li><b>大事にすること</b>: 確証と探索を混ぜない。探索で見つけたことは「次の仮説」であり、別のデータで確かめるまで結論にしない。</li><li><b>成果物</b>: <code>&lt;project&gt;/log/specs.csv</code>、<code>main.tex</code> の <code>result</code> 箱</li></ul>
+<h3 id="8-実証し-公開する">8. 実証し、公開する ◆</h3>
+<ul><li><b>AI</b>: 結果を成功基準と照合し、支持／棄却の判定を下書きする。別のエージェントが査読者として監査する。再現パッケージとライブラリを整える。</li><li><b>人</b>: Go／No-Go／ピボットを決める。出す先（学会・査読誌・ライブラリの公開）を決める。</li><li><b>大事にすること</b>: 公開の<b>前に</b>、データの利用規約・倫理審査・秘匿審査の要否を確かめる。棄却された仮説も結果として残す。</li><li><b>成果物</b>: <code>research/audit-*.md</code>、<code>decision</code> 箱、再現パッケージ、ライブラリ</li></ul>
+<h2 id="ロックとは何か">ロックとは何か</h2>
+<p>元のラボの「実験の前に論文を書く」に当たる。化学では、実験する前には結果が存在しない。 経済学ではデータが先に手元にあるので、「まだ結果を見ていない」という時点を自分で作る必要がある。その時点に押す日付印がロックである。</p>
+<div class="tablewrap"><table><thead><tr><th></th><th>内容</th></tr></thead><tbody><tr><td><b>何を固定するか</b></td><td>段階4で書いた論文のうち、①仮説、②推定の方法（推定式・モデル）、③標本の定義、④主な結果変数、⑤成功基準と棄却条件</td></tr><tr><td><b>どうやって</b></td><td>人が承認した後に <code>python3 tools/lock_pap.py &lt;project&gt;</code> を実行する。<code>paper/main.tex</code> と <code>hypotheses.json</code> の指紋（ハッシュ値）と日時が <code>prereg/LOCK.json</code> に記録される。これをコミットする</td></tr><tr><td><b>ロックの前にしてよいこと</b></td><td>文献を読む。合成データでコードを書いて通す。実データの説明変数と標本の構成（件数・欠損）を見る</td></tr><tr><td><b>ロックの前にしてはいけないこと</b></td><td>実データの結果変数を見る・集計する・図にする・推定する。<code>log_spec()</code> は、未ロックのまま実データの推定を記録しようとすると止まる</td></tr><tr><td><b>ロックの後</b></td><td>固定した仕様で推定する（これが「確証」）。結果を <code>result</code> 箱に足していく</td></tr><tr><td><b>後から変えたくなったら</b></td><td>変えてよい。ただし理由と日付を更新履歴に書き、もう一度ロックする。<code>lock_pap.py --check</code> が、前回のロックから変わったファイルを教える</td></tr><tr><td><b>結果を見て思いついた分析</b></td><td>やってよい。「探索」と名札を付けて記録し、本文でも探索と書く。確証と同じ重みでは語らない</td></tr></tbody></table></div>
+<p>ロックは、仕様を変えることを禁じる仕組みではない。<b>いつ・何を・なぜ変えたかが残る</b>ようにする仕組みである。 守れないこともある。記録を通さずにデータを見ることは止められないし、リポジトリ内の記録は第三者への証明としては弱い。 強い証明が要るときは、外部の登録簿にも出す。</p>
+<h2 id="データの秘匿区分-AI-に何を見せてよいか">データの秘匿区分（AI に何を見せてよいか）</h2>
+<p>Claude Code も外部の AI サービスである。データを読ませることは、外部に送ることと同じである（<code>ETHICS.md</code> 第4条）。</p>
+<div class="tablewrap"><table><thead><tr><th>区分</th><th>例</th><th>エージェントに許すこと</th></tr></thead><tbody><tr><td>T0 公開</td><td>公的統計の公表値、公開パネル、公開済みの再現データ、合成データ</td><td>生データを読む・推定する</td></tr><tr><td>T1 制限</td><td>利用申請が要る個票、購入データ</td><td>コードを書く。集計値・推定結果・ログだけを見る</td></tr><tr><td>T2 秘匿</td><td>オンサイト施設の行政データ、個人が特定できる情報</td><td>合成データでコードを書くだけ。実行は人が行う</td></tr></tbody></table></div>
+<p>区分は <code>&lt;project&gt;/data/README.md</code> に書く。書かれていないデータは T2 として扱う。</p>
+<h2 id="道具の使い分け">道具の使い分け</h2>
+<div class="tablewrap"><table><thead><tr><th>道具</th><th>何に使う</th><th>注意</th></tr></thead><tbody><tr><td>Claude Code（このリポジトリ）</td><td>調査・執筆・コード・推定・作図・ビルド</td><td>成果は必ずファイル（正本）に書かせる</td></tr><tr><td>ポータル（<code>portal/</code>）</td><td>全員の共通の地図。星取り表・文書・動画</td><td>手で直さない。正本を直して <code>python3 portal/build.py</code></td></tr><tr><td>動画（<code>&lt;project&gt;/video/</code>）</td><td>1本の文書を、図と字幕で3〜8分にまとめる</td><td>内容は正本にあるものだけ。規約は <code>common/video/STYLE.md</code></td></tr><tr><td>R</td><td>推定と作図の主力（<code>&lt;project&gt;/code/</code>）</td><td>推定は <code>log_spec()</code> を通す</td></tr><tr><td>Python</td><td>道具類と、公開するライブラリ（<code>&lt;project&gt;/python/</code>）</td><td>推定に使うときは <code>speclog.py</code> を通す</td></tr><tr><td>文献マスター表（<code>literature/papers.csv</code>）</td><td>読んだ文献の唯一の正。各プロジェクトの文献ファイルはここから作る</td><td>論文の本体は保存しない。読んだ深さを正直に書く</td></tr><tr><td>Crossref API</td><td>DOI の照合（<code>python3 tools/litdb.py verify</code>）</td><td>照合できない DOI は書かない</td></tr><tr><td>LaTeX（LuaLaTeX）</td><td>正本と PDF</td><td>ウェブで崩れない書き方は <code>AGENTS.md</code> §3</td></tr></tbody></table></div>
+<h2 id="進め方の指示-人もエージェントも-この順で">進め方の指示（人もエージェントも、この順で）</h2>
+<ol><li><b>今どこにいるか確かめる。</b> <code>&lt;project&gt;/README.md</code> と <code>main.tex</code> の「判断と次の一手」を読み、図1のどの段階か言えるようにする。</li><li><b>ロックの状態を確かめる。</b> <code>python3 tools/lock_pap.py &lt;project&gt; --check</code>。</li><li><b>その段階の成果物を作る。</b> 新しいファイルを増やさず、同じ <code>main.tex</code> に積み上げる。</li><li><b>事実には出典を付ける。</b> 推測は「仮説」「筆者の見解」と書く。推定値には標準誤差か信頼区間・n を付ける。</li><li><b>図にする。</b> 1節に1枚を目安に、言いたいことを図で示す。大きな文書には動画を付ける。</li><li><b>◆では人が判断する。</b> 判断・理由・次の一手（誰が・いつまでに）を <code>decision</code> 箱に書く。</li><li><b>ビルドして見る。</b> <code>latexmk</code> で PDF（エラー0・未定義引用0）、<code>python3 portal/build.py</code> でポータル（変換警告0）。</li><li><b>更新履歴に1行足す。</b></li></ol>
+<h2 id="AI-への頼み方-コピーして使う">AI への頼み方（コピーして使う）</h2>
+<pre><code>[1] &lt;分野&gt; で研究テーマの候補を100個出し、theme/research/00_plan.md の15軸で採点して。
+    3つのトラックを混ぜること。根拠 URL を付け、python3 tools/score_themes.py で順位を出し、ポータルを更新して。
+[2] テーマ &lt;TID&gt; をディープダイブして deepdive/&lt;TID&gt;.md に書いて。データは入手手順・期間・費用・秘匿区分まで調べて。
+[3] &lt;project&gt; の文献から、5つの型で仮説を100個作り、検証方法・必要なデータ・数値の成功基準と棄却条件を付けて
+    hypotheses/hypotheses.json に書いて。上位10個を main.tex の hypothesis 箱に書いて。
+[4] &lt;project&gt; の仮説 H&lt;n&gt; を、結果を見る前の論文として paper/main.tex に書いて。表は枠だけ、予想値は仮定と明記。
+    sim/ で検出力を出し、Go/No-Go 基準を入れて。実データの結果変数には触れないで。
+[5] &lt;project&gt; の文献から推定値・標準誤差・n・手法を抽出して research/estimates.csv にして。
+    ランダムに50件を原文と照合し、精度を報告して。
+[7] ロック済みの仕様を推定し、main.tex に日付つきの result 箱を足して。確証と探索を分けて。
+[8] 査読者として &lt;project&gt; を監査し、research/audit-&lt;日付&gt;.md に指摘と対応を書いて。
+[動画] &lt;project&gt; の main.tex を、common/video/STYLE.md の構成で動画にして。数値は本文にあるものだけ使って。</code></pre>
+<h2 id="守ること">守ること</h2>
+<ul><li>成果は会話で終わらせず、正本に書く。ポータルの生成物は手で直さない。</li><li>事実には出典を付ける。DOI は Crossref で照合したものだけ書く。AI の要約は原文で確かめる。</li><li>仮説には数値の棄却条件を付ける。予想値は「仮定」と書く。</li><li>ロック前に実データの結果変数を見ない。ロック後の変更は理由と日付を残す。</li><li>走らせた推定はすべて残す。確証と探索を書き分ける。</li><li>古い結果・有意でない結果・棄却した仮説を消さない。</li><li>データは秘匿区分に従う。倫理規定（<code>ETHICS.md</code>）に反するおそれがあれば、止めて人に上げる。</li><li>◆の判断は人が行い、理由を書く。</li><li>量を増やしたら、見せ方を軽くする。結論を先に、図を多く。</li></ul>
+<h2 id="元のラボから変えた点">元のラボから変えた点</h2>
+<p>このラボは <a href="https://github.com/INDXDev/indx-lab">INDXDev/indx-lab</a>（化学・物理むけ、特許優先）の進め方を、経済学・計量経済学に移したものである。</p>
+<div class="tablewrap"><table><thead><tr><th>元のラボ</th><th>経済学版</th><th>理由</th></tr></thead><tbody><tr><td>成果は特許</td><td>成果は学会発表・査読論文、またはライブラリ</td><td>経済学の成果は特許にならない</td></tr><tr><td>実験の前に論文を書く</td><td>結果を見る前に論文を書き、ロックする</td><td>データが先にあるので、「前」を自分で作る</td></tr><tr><td>シミュレーター＝物理モデル</td><td>合成データで推定の手続きを点検する。構造推定ではモデルそのもの</td><td>物理法則に当たるものがない</td></tr><tr><td>実験ノートを全部残す</td><td>走らせた推定を全部残す</td><td>失敗の隠れ方が違う（選択的な報告）</td></tr><tr><td>公開前に特許の要否を確認</td><td>公開前にデータ規約・倫理審査を確認。倫理規定を持つ</td><td>止まる理由が違う</td></tr><tr><td>13軸（市場規模・知財化しやすさ…）</td><td>15軸（識別の信頼性・検出力・ライブラリ価値…）</td><td><code>theme/paper/main.tex</code></td></tr><tr><td>分野は1つ（材料）</td><td>3トラック（因果推論・構造推定・推定量）</td><td>計量経済学の幅を残す</td></tr></tbody></table></div>
+<footer>正本: <code>README.md</code>。このページは自動生成。直すときは正本を直して <code>python3 portal/build.py</code>。</footer>
+</main></div>
+<script>document.getElementById('menu').onclick=()=>document.body.classList.toggle('nav-open');</script>
+</body></html>
