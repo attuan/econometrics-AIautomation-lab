@@ -352,6 +352,10 @@ def main():
     th.append(md_page(site, ROOT / "theme/research/00_plan.md", "theme/plan.html", title="採点の手順"))
     if (ROOT / "theme/research/axes_review.md").exists():
         th.append(md_page(site, ROOT / "theme/research/axes_review.md", "theme/axes_review.html", title="軸の見直し（調査と提案）"))
+    if (ROOT / "theme/research/if_predictor_summary.md").exists():
+        th.append(md_page(site, ROOT / "theme/research/if_predictor_summary.md", "theme/if_predictor.html", title="題目と要旨から IF を当てる（非公開）"))
+    if (ROOT / "theme/research/contribution_types.md").exists():
+        th.append(md_page(site, ROOT / "theme/research/contribution_types.md", "theme/contribution_types.html", title="評価される貢献とは何か（メタ研究の構想）"))
     if (ROOT / "theme/research/sources.md").exists():
         th.append(md_page(site, ROOT / "theme/research/sources.md", "theme/sources.html", title="出典の照合記録"))
     site.nav.append(("1. テーマ選定", th))

@@ -29,3 +29,6 @@ portal/.cache/
 
 # npm（package.json は Python の道具を呼ぶだけ）
 node_modules/
+
+# 上司の未発表の分析の要約（公開しない。2026-11-24）
+theme/research/if_predictor_summary.md
