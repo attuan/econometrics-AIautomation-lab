@@ -9,6 +9,7 @@
     "dev": "npm run start",
     "figs": "python3 common/figs/lab_figs.py",
     "themes": "python3 theme/paper/scripts/build.py",
-    "lit": "python3 tools/litdb.py verify && python3 tools/litdb.py check"
+    "lit": "python3 tools/litdb.py verify && python3 tools/litdb.py check",
+    "deploy": "python3 tools/deploy_pages.py"
   }
 }

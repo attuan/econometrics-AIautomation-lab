@@ -31,7 +31,7 @@ LaTeX・Markdown・CSV・JSON（正本） ──latexmk──▶ PDF
 ├── common/figs/             README の図（lab_figs.py で描く）
 ├── common/video/            動画プレイヤーと規約（lib.js, player.js, STYLE.md）
 ├── guide/video/             ラボ案内の動画
-├── tools/                   score_themes.py / litdb.py / verify_dois.py / lock_pap.py / check_video.sh
+├── tools/                   score_themes.py / litdb.py / verify_dois.py / lock_pap.py / check_video.sh / deploy_pages.py
 ├── portal/                  ポータルの生成器（build.py, tex2html.py, md2html.py, assets/）。dist/ は生成物
 ├── literature/              文献マスター表（papers.csv。唯一の正）と、統合前の出力（incoming/）
 ├── theme/                   段階1: 採点軸の解説（paper/）、採点表と重み（research/）、出典（common/refs.bib）
@@ -170,15 +170,16 @@ python3 theme/paper/scripts/build.py                   # 星取り表（theme/pa
 python3 common/figs/lab_figs.py                        # README の図
 python3 portal/build.py                                # ポータル（変換警告0を確認）
 python3 -m http.server -d portal/dist 4321             # http://localhost:4321 で見る
+python3 tools/deploy_pages.py                          # GitHub Pages に公開（人の確認を取ってから）
 ```
 
 - npm からも呼べる（`package.json`。中身は上の Python コマンドを呼ぶだけで、依存パッケージは無い）。
-  `npm start`（ポータルを作って http://localhost:4321 で開く）、`npm run build`、`npm run serve`、`npm run figs`、`npm run themes`、`npm run lit`。
+  `npm start`（ポータルを作って http://localhost:4321 で開く）、`npm run build`、`npm run serve`、`npm run figs`、`npm run themes`、`npm run lit`、`npm run deploy`。
 
 - `portal/build.py` は PDF を作らない。**先に latexmk で main.pdf を作る**。
 - 必要なツール: TeX Live（lualatex, latexmk, biber）、Ghostscript（gs）、R、Python 3（標準ライブラリのみ）。
 - 生成物（`portal/dist/`）は手で直さない。直すときは正本を直して作り直す。
-- ポータルはまだ外部に公開していない。公開先と閲覧制限は人が決める（`DECISIONS.md` D7）。
+- ポータルは GitHub Pages で公開している（`DECISIONS.md` D11）。`python3 tools/deploy_pages.py`（`npm run deploy`）が、公開版（`build.py --public`。git に入れていない文書を除く）を作って `gh-pages` ブランチに push する。誰でも見られるので、出す前に中身を確かめる。
 
 ## 7. エージェントへの依頼の型
 

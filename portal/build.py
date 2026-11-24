@@ -2,6 +2,7 @@
 """ポータルを作る。正本（README.md・*.md・*/paper/**/main.tex・CSV・JSON・動画）→ portal/dist/
 
     python3 portal/build.py            # 生成（変換警告があれば終了コード 1）
+    python3 portal/build.py --public   # 公開版。git に入れていない文書（.gitignore。例: DECISIONS.md）を載せない
     python3 -m http.server -d portal/dist 4321   # http://localhost:4321 で見る
 
 Python の標準ライブラリだけで動く。図（TikZ）の描画にだけ lualatex と gs を使う。
@@ -13,6 +14,7 @@ import html
 import json
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -28,6 +30,13 @@ SKIP = {"portal", "common", "tools", "theme", "deepdive", "literature", "node_mo
 TRACK = {"causal": "因果推論", "structural": "構造推定", "method": "推定量・手法"}
 STATUS = {"untested": "未検証", "supported": "支持", "rejected": "棄却", "inconclusive": "保留", "dropped": "取り下げ"}
 warnings = []
+PUBLIC = "--public" in sys.argv
+
+
+def git_ignored(path):
+    """.gitignore で除外しているファイルか。公開版ではこれを載せない。"""
+    r = subprocess.run(["git", "check-ignore", "-q", str(path)], cwd=ROOT)
+    return r.returncode == 0
 
 
 def warn(msg):
@@ -326,6 +335,9 @@ def main():
         lab.append(("動画で見る", o))
     for name, title in (("AGENTS.md", "研究のまとめ方"), ("ETHICS.md", "倫理規定"), ("DECISIONS.md", "人が決めること")):
         if (ROOT / name).exists():
+            if PUBLIC and git_ignored(ROOT / name):
+                print(f"  公開版のため載せない: {name}")
+                continue
             lab.append(md_page(site, ROOT / name, f"lab/{name[:-3].lower()}.html", title=title))
     site.nav.append(("ラボ", lab))
 
