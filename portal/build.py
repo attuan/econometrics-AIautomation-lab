@@ -163,6 +163,7 @@ def tex_page(site, src, out, label=None):
     body = conv.convert()
     pdf = src.with_suffix(".pdf")
     if pdf.exists():
+        (DIST / out).parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(pdf, (DIST / out).parent / (out.rsplit("/", 1)[-1].replace(".html", ".pdf")))
         body = body.replace("<!--pdf-->", f'<p class="pdf"><a href="{out.rsplit("/", 1)[-1].replace(".html", ".pdf")}">PDF で読む</a></p>')
     else:

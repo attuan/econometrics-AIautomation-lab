@@ -1,0 +1,237 @@
+# 判定の質問（案）。2026-11-24 作成。人が確かめてからロックで固定する。
+# 改訂: 2026-11-24 Bb・Bc（「A であって B ではない」の形で、A が無い論文が はい に寄った）。
+# - 決定モデル（OpenAI Decisions API, predicate 型）に、題目と要旨だけを渡す。雑誌名・著者・年は渡さない。
+# - 各質問の答えは P(yes)。型の判定は「その型の質問の P の平均が 0.5 以上」を該当とする（仮。ロック前に決める）。
+# - 質問文は英語（要旨が英語のため）。日本語の説明は note に書く。
+# - id の接頭辞: P=論文の種類、C1=誤りを正す、C2=道具、X=小幅な拡張、G=特定の国・業種、
+#   S=証拠の種類、B=流行語、TS=一流誌らしい文体（1問）、ST=具体的な文体
+
+preamble = "You will read the title and abstract of an academic paper in economics or econometrics. Answer the question about this paper based only on the title and abstract."
+
+# ---------------------------------------------------------------- 論文の種類（部分標本を作るため）
+[[q]]
+id = "P1"
+set = "paper_type"
+text = "Is the main contribution of this paper a new or improved statistical or econometric method (an estimator, test, inference procedure, or algorithm), rather than an empirical finding about the economy?"
+note = "手法論文か。H11 の部分標本"
+[[q]]
+id = "P2"
+set = "paper_type"
+text = "Is the main contribution of this paper an empirical finding about economic behavior, markets, or policy, obtained by analyzing data?"
+note = "応用論文か。H07 の部分標本"
+[[q]]
+id = "P3"
+set = "paper_type"
+text = "Is this paper primarily economic theory (a theoretical model of agents or markets) without a new statistical method or a new empirical finding?"
+note = "経済理論の論文か。Econometrica などで計量でない論文を見分ける（感度分析で除く）"
+
+# ---------------------------------------------------------------- H01 誤りを正す（C1）
+[[q]]
+id = "C1a"
+set = "H01"
+text = "Does the abstract show that a commonly used method, practice, or assumption in empirical research can produce misleading or incorrect results?"
+[[q]]
+id = "C1b"
+set = "H01"
+text = "Does the paper identify a specific problem with the way many existing studies estimate, test, or interpret something?"
+[[q]]
+id = "C1c"
+set = "H01"
+text = "Does the paper both diagnose a flaw in standard practice and propose a correction or alternative that researchers can adopt?"
+[[q]]
+id = "C1d"
+set = "H01"
+text = "Would reading this paper likely lead many applied researchers to change how they conduct or interpret a standard analysis?"
+note = "影響の見込みを聞く。LLM の事前知識が入りやすいので、感度分析で外した版も出す"
+
+# ---------------------------------------------------------------- H02 小幅な拡張（X）
+[[q]]
+id = "Xa"
+set = "H02"
+text = "Does the paper mainly apply an existing, well-known method to a new country, region, sector, or time period, without changing the method?"
+[[q]]
+id = "Xb"
+set = "H02"
+text = "Is the methodological contribution a small modification of an existing method, such as relaxing one assumption or adding one variable or regime?"
+[[q]]
+id = "Xc"
+set = "H02"
+text = "Could the main result of this paper be described as 'the same analysis as previous studies, with different data'?"
+[[q]]
+id = "Xd"
+set = "H02"
+text = "Is the stated contribution mainly to fill a gap that exists only because no one has yet studied this particular case, rather than to answer a new question?"
+
+# ---------------------------------------------------------------- H03 道具を作る（C2）
+[[q]]
+id = "C2a"
+set = "H03"
+text = "Does the paper propose a method that is intended to be used by many researchers in a broad class of applications, not just one specific setting?"
+[[q]]
+id = "C2b"
+set = "H03"
+text = "Does the paper provide a general-purpose estimator, test, or procedure that can be applied to many different datasets or models?"
+[[q]]
+id = "C2c"
+set = "H03"
+text = "Does the abstract mention that software, code, or an easy-to-implement procedure is provided for practitioners?"
+[[q]]
+id = "C2d"
+set = "H03"
+text = "Does the paper offer a practical tool that addresses a problem many empirical researchers face in their routine work?"
+
+# ---------------------------------------------------------------- H07 特定の国・業種（G）
+[[q]]
+id = "Ga"
+set = "H07"
+text = "Does the title or abstract name a specific country, region, or city as the setting of the analysis?"
+[[q]]
+id = "Gb"
+set = "H07"
+text = "Does the title or abstract name a specific industry or sector (for example tourism, agriculture, banking, or energy) as the object of study?"
+[[q]]
+id = "Gc"
+set = "H07"
+text = "Is the main finding stated as a fact about one particular country, region, or sector, rather than as a general economic relationship?"
+[[q]]
+id = "Gd"
+set = "H07"
+text = "Is the United States named as the setting of the analysis?"
+note = "米国を別に数える感度分析のため"
+
+# ---------------------------------------------------------------- H11 証拠の種類（S）。手法論文（P1）に限る
+[[q]]
+id = "Sa"
+set = "H11"
+text = "Does the abstract state a formal theoretical result about the method, such as consistency, asymptotic normality, validity, or optimality?"
+[[q]]
+id = "Sb"
+set = "H11"
+text = "Does the paper illustrate or evaluate the method with an application to real data?"
+[[q]]
+id = "Sc"
+set = "H11"
+text = "Does the paper evaluate the method with Monte Carlo simulations or simulation experiments?"
+# 合成: シミュレーションだけ = Sc >= 0.5 かつ Sa < 0.5 かつ Sb < 0.5
+
+# ---------------------------------------------------------------- H16 流行語（B）
+# 流行の題材の一覧（結果を見る前に固定する）: 機械学習・AI を宣伝的に使う、暗号資産・ブロックチェーン、COVID-19、ESG・気候金融、ビッグデータ
+[[q]]
+id = "Ba"
+set = "H16"
+text = "Does the title or the first sentence of the abstract feature a currently fashionable topic such as cryptocurrency, blockchain, COVID-19, ESG, climate finance, big data, or artificial intelligence?"
+[[q]]
+id = "Bb"
+set = "H16"
+text = "Does the abstract mention machine learning or artificial intelligence, and present it mainly as a selling point rather than as a method whose statistical properties are studied? If the abstract does not mention machine learning or artificial intelligence at all, answer no."
+note = "2026-11-24 改訂。旧文は機械学習に触れない論文でも はい に寄った（20本の試しで85%が はい、うち機械学習の語を含むのは0本）"
+[[q]]
+id = "Bc"
+set = "H16"
+text = "Does the paper study a currently fashionable topic (such as cryptocurrency, COVID-19, ESG, climate finance, big data, or artificial intelligence), and is its main appeal the timeliness of that topic rather than the importance of its question or method? If the paper does not study such a fashionable topic, answer no."
+note = "2026-11-24 改訂。Bb と同じ欠陥（題材に触れない論文で はい に寄る）を避けるため、前提を明記した"
+
+# ---------------------------------------------------------------- H25・H18 一流誌らしい文体（1問）
+[[q]]
+id = "TS"
+set = "H25"
+text = "Is this abstract written in the style typical of papers published in the very top journals in economics and econometrics?"
+note = "1問で「一流誌らしさ」を聞く。H25 で下の具体的な文体の質問で分解する"
+
+# ---------------------------------------------------------------- H25・H18 具体的な文体（ST）。一覧は結果を見る前に固定する
+[[q]]
+id = "ST01"
+set = "style"
+text = "Does the first sentence of the abstract state a general question or problem, rather than describe what the paper does?"
+[[q]]
+id = "ST02"
+set = "style"
+text = "Does the abstract begin with a formulaic sentence such as 'This paper investigates/examines the impact of X on Y'?"
+[[q]]
+id = "ST03"
+set = "style"
+text = "Does the abstract explicitly state the paper's main contribution in one clear sentence?"
+[[q]]
+id = "ST04"
+set = "style"
+text = "Does the abstract state the conditions or scope under which the result holds?"
+[[q]]
+id = "ST05"
+set = "style"
+text = "Does the abstract make claims that seem stronger than what the described analysis can support?"
+[[q]]
+id = "ST06"
+set = "style"
+text = "Does the abstract contain grammatical errors or awkward English?"
+[[q]]
+id = "ST07"
+set = "style"
+text = "Does the abstract use mostly active voice with 'we' as the subject?"
+[[q]]
+id = "ST08"
+set = "style"
+text = "Does the abstract list several methods or tests by name (for example ARDL, VECM, Granger causality, GARCH) without explaining why they are used?"
+[[q]]
+id = "ST09"
+set = "style"
+text = "Does the abstract report the size of the main result as a number, not only its direction or statistical significance?"
+[[q]]
+id = "ST10"
+set = "style"
+text = "Does the abstract describe results mainly in terms of statistical significance (for example 'significant positive effect')?"
+[[q]]
+id = "ST11"
+set = "style"
+text = "Is the abstract concise, with every sentence conveying new information and no filler?"
+[[q]]
+id = "ST12"
+set = "style"
+text = "Does the abstract spend more than one sentence on background or literature before stating what the paper does?"
+[[q]]
+id = "ST13"
+set = "style"
+text = "Does the abstract use technical notation or jargon that would be hard for a general economist to follow?"
+[[q]]
+id = "ST14"
+set = "style"
+text = "Does the abstract explain why the result matters for economics beyond the specific setting studied?"
+[[q]]
+id = "ST15"
+set = "style"
+text = "Does the abstract end with policy recommendations or practical implications stated in general terms?"
+[[q]]
+id = "ST16"
+set = "style"
+text = "Does the abstract contrast the paper's approach or finding with what existing methods or studies assume or conclude?"
+[[q]]
+id = "ST17"
+set = "style"
+text = "Does the abstract use promotional words such as 'novel', 'first', 'comprehensive', or 'robust' to describe the paper?"
+[[q]]
+id = "ST18"
+set = "style"
+text = "Does the abstract use hedging language (for example 'may', 'suggest', 'tend to') when stating findings?"
+[[q]]
+id = "ST19"
+set = "style"
+text = "Is the title phrased as a claim or a question, rather than as a description of the topic?"
+[[q]]
+id = "ST20"
+set = "style"
+text = "Is the abstract shorter than about 100 words?"
+[[q]]
+id = "ST21"
+set = "style"
+text = "Is the abstract longer than about 250 words?"
+[[q]]
+id = "ST22"
+set = "style"
+text = "Does the abstract describe a sequence of steps or analyses ('First... Second... Finally...') rather than one main argument?"
+[[q]]
+id = "ST23"
+set = "style"
+text = "Does the abstract state a single main finding or contribution, rather than a list of several separate findings?"
+[[q]]
+id = "ST24"
+set = "style"
+text = "Is the abstract written so that a non-specialist economist could understand what was found?"

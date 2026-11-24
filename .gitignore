@@ -32,3 +32,7 @@ node_modules/
 
 # 上司の未発表の分析の要約（公開しない。2026-11-24）
 theme/research/if_predictor_summary.md
+
+# API キーなどの秘密（中身は git に入れない。雛形は .env.example）
+.env
+.env.local
