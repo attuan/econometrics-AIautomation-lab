@@ -1,0 +1,17 @@
+id	track	first_author	year	title
+vanloon2026	method	van Loon	2026	Using large language models as a source of human behavioral data in social science experiments
+arbour2026	method	Arbour	2026	AI-Assisted Variance Reduction in Randomized Experiments
+wang2024	method	Wang	2024	Large Language Models for Market Research: A Data-augmentation Approach
+ye2026	method	Ye	2026	Rectification Difficulty and Optimal Sample Allocation in LLM-Augmented Surveys
+krsteski2025	method	Krsteski	2025	Valid Survey Simulations with Limited Human Data: The Roles of Prompting, Fine-Tuning, and Rectification
+chen2026b	method	Chen	2026	Power Analysis for Prediction-Powered Inference
+zhang2025	method	Zhang	2025	Agentic Economic Modeling
+mani2025	method	Mani	2025	No Free Lunch: Non-Asymptotic Analysis of Prediction-Powered Inference
+vanderlaan2026	method	van der Laan	2026	Calibeating Prediction-Powered Inference
+ashokkumar2026	meta	Ashokkumar	2026	Large Language Models Can Predict the Results of Social Science Experiments
+li2026b	method	Li	2026	Integrating digital twins with randomized experiments
+ye2026b	method	Ye	2026	Flexible but Fragile: Budgeted Human-Digital-Twin Allocation for A/B Tests
+zrnic2023	method	Zrnic	2023	Cross-Prediction-Powered Inference
+fisch2024	method	Fisch	2024	Stratified Prediction-Powered Inference for Effective Hybrid Evaluation of Language Models
+chen2025b	meta	Chen	2025	Predicting Field Experiments with Large Language Models
+cui2025	meta	Cui	2025	A Large-Scale Replication of Scenario-Based Experiments in Psychology and Management Using Large Language Models
